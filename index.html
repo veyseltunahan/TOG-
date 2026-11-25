@@ -1,11 +1,15 @@
-<!DOCTYPE html>
+,<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>TOGİ SINAV ARKADAŞI</title>
 <meta name="theme-color" content="#071722">
-<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="TOGİ"><meta name="application-name" content="TOGİ"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TOGİ">
+<meta name="application-name" content="TOGİ">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <script>try{var H=document.documentElement;H.dataset.accent=localStorage.getItem("yks_tema2")||"violet";H.dataset.mode=localStorage.getItem("yks_mod")||"light"}catch(e){document.documentElement.dataset.accent="violet";document.documentElement.dataset.mode="light"}</script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -401,17 +405,12 @@ body.ktx #sv{display:none!important}
 .hmore{margin-top:10px;background:none;border:0;color:#fff;font:600 13px inherit;font-family:inherit;padding:4px 0;cursor:pointer;opacity:.92}
 .gr{display:grid;grid-template-columns:1.3fr 1fr .8fr .6fr;gap:6px;padding:8px 0;border-top:1px solid var(--line);font-size:13.5px}.gr:first-of-type{border-top:0}
 .gdr{cursor:pointer}.gdr:hover b{color:var(--pri)}
-</style>
-<link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="icon-192.png">
-<link rel="icon" type="image/png" href="icon-192.png">
-<style>
 .togi-pwa{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px;padding:10px 12px;
   background:#071722;color:#fff;border-bottom:1px solid rgba(255,255,255,.12);
   box-shadow:0 8px 22px -14px rgba(0,0,0,.6);font-size:13px;line-height:1.35;font-family:inherit;
   animation:tpIn .35s ease-out}
 .togi-pwa[hidden]{display:none}
-.togi-pwa .tp-ico{width:40px;height:40px;border-radius:10px;flex:none;object-fit:cover}
+.togi-pwa .tp-ico{width:40px;height:40px;border-radius:10px;flex:none;object-fit:cover;background:#fff}
 .togi-pwa .tp-txt{flex:1;min-width:0}
 .togi-pwa .tp-txt b{display:block;font-size:14px;font-weight:700}
 .togi-pwa .tp-txt span{display:block;color:rgba(255,255,255,.74)}
@@ -421,14 +420,15 @@ body.ktx #sv{display:none!important}
 .togi-pwa .tp-btn[hidden]{display:none}
 .togi-pwa .tp-x{flex:none;width:36px;height:36px;display:grid;place-items:center;background:none;border:0;
   border-radius:50%;color:rgba(255,255,255,.75);font-size:18px;line-height:1;cursor:pointer}
-.togi-pwa .tp-btn:focus-visible,.togi-pwa .tp-x:focus-visible{outline:3px solid #fff;outline-offset:2px}
 @keyframes tpIn{from{transform:translateY(-100%);opacity:0}to{transform:none;opacity:1}}
 @media (prefers-reduced-motion:reduce){.togi-pwa{animation:none}}
 </style>
+<link rel="apple-touch-icon" href="ikon-192.png">
+<link rel="icon" type="image/png" href="ikon-192.png">
 </head>
 <body>
 <div id="togiPwa" class="togi-pwa" role="region" aria-label="Uygulamayı yükle" hidden>
-  <img class="tp-ico" src="icon-192.png" alt="" width="40" height="40">
+  <img class="tp-ico" src="ikon-192.png" alt="TOGİ" width="40" height="40">
   <div class="tp-txt">
     <b>TOGİ’yi Ana Ekrana Ekle</b>
     <span id="tpSub">Uygulama gibi tam ekran aç.</span>
@@ -451,7 +451,7 @@ body.ktx #sv{display:none!important}
 
   <section class="card">
     <p class="mut" id="ad"></p>
-    <p style="margin-top:6px"><span class="big" id="net">–</span><span class="delta" id="dl"></span></p>
+    <p style="margin-top:6px"><span class="big" id="net">0</span><span class="delta" id="dl"></span></p>
     <div class="bar" style="margin-top:14px"><i id="hb" style="width:0;background:var(--pri)"></i></div>
     <p class="mut" style="margin-top:6px" id="hk"></p><div class="hst" id="hst"></div><button class="hmore" type="button" id="hmore">Ayrıntılı analiz ›</button>
   </section>
@@ -494,7 +494,6 @@ body.ktx #sv{display:none!important}
  </div>
 </div>
 
-
 <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-label="Deneme ekle">
  <div class="in">
   <button class="x" id="kapat">Kapat</button>
@@ -509,8 +508,8 @@ body.ktx #sv{display:none!important}
     <input type="file" id="fg" accept="image/*" hidden>
   </div>
   <div id="s5" hidden><h1 style="margin-top:28px">Sonuçları elle gir</h1><p class="mut" style="margin-top:4px">Belgedeki her ders için doğru ve yanlış sayısını yaz. Boş otomatik hesaplanır, bilmediğin dersi boş bırakabilirsin.</p><div class="card" id="elr"></div><p id="elm" role="alert" style="color:var(--bad);font-size:13px;font-weight:600;margin:10px 0 0"></p><button class="btn" id="elb" type="button" style="margin-top:12px">Devam</button><button class="btn alt" id="eli" type="button">Vazgeç</button></div>
-    <div id="s4" hidden><h1 style="margin-top:28px">Belgeyi çerçeveye sığdır</h1><div class="kcv"><video id="kv" playsinline muted autoplay></video><div class="kcg"></div></div><p class="mut" style="margin:0 0 12px">Belgenin dört köşesi çerçevenin içinde görünsün, yazılar net ve ışık yansımasız olsun.</p><button class="btn" id="kcc" type="button">Fotoğrafı çek</button><button class="btn alt" id="kci" type="button">Vazgeç</button></div>
-    <div id="s2" hidden>
+  <div id="s4" hidden><h1 style="margin-top:28px">Belgeyi çerçeveye sığdır</h1><div class="kcv"><video id="kv" playsinline muted autoplay></video><div class="kcg"></div></div><p class="mut" style="margin:0 0 12px">Belgenin dört köşesi çerçevenin içinde görünsün, yazılar net ve ışık yansımasız olsun.</p><button class="btn" id="kcc" type="button">Fotoğrafı çek</button><button class="btn alt" id="kci" type="button">Vazgeç</button></div>
+  <div id="s2" hidden>
     <h1 style="margin-top:28px">Belgen okunuyor</h1>
     <div class="pv" id="pv"><img id="im" alt="Yüklenen deneme belgesi"></div>
     <div class="bar"><i id="pb" style="width:0;background:var(--pri)"></i></div>
@@ -529,121 +528,155 @@ body.ktx #sv{display:none!important}
 <div class="toast" id="ts" hidden role="status"></div>
 
 <script>
+function $(i){return document.getElementById(i)}
+function f(n){return (Math.round(n*100)/100).toString().replace(".",",")}
+function nt(v){return v[0]-v[1]/4}
+function tot(e){if(!e)return 0;return e[1].reduce(function(s,v){return s+nt(v)},0)}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function ad2(s,x){return s+x}
+function sa(n){return (Math.round(n*2)/2).toString().replace(".",",")}
+
+/* Kalıcı deneme verileri (başlangıçta boş) */
+function dL(){try{var x=JSON.parse(localStorage.getItem("yks_denemeler_v1"));if(x&&Array.isArray(x.TYT)&&Array.isArray(x.AYT))return x}catch(e){}return{TYT:[],AYT:[]}}
+function dW(){try{localStorage.setItem("yks_denemeler_v1",JSON.stringify({TYT:S.TYT.d,AYT:S.AYT.d}))}catch(e){}}
+var SAVED_D=dL();
+
 var AD=["Türkçe","Sosyal","Temel Mat.","Fen"],TOP=[40,20,40,20],HEDEF=95,P=null;
 var TIP={"Matematik":["Türev ve integralde her gün 15 soru çöz.","Yanlış çözümlerini adım adım yeniden yaz."],"Fizik":["Formül kartı hazırla, her gün 20 soru çöz.","Grafik yorumlama sorularına ağırlık ver."],"Kimya":["Organik kimya tepkimelerini şemaya dök.","Hesaplamalı sorularda birimleri yaz."],"Biyoloji":["Konu başına 30 soru çöz.","Şekil ve grafik sorularını ayrıca tekrar et."],"Türkçe":["Her gün 2 paragraf seti çöz, süre tut.","Yanlış yaptığın dil bilgisi sorularını bir deftere yaz."],
 "Sosyal":["Haftada 2 konunun özetini çıkar, ardından 20 soru çöz.","Harita ve tarih kronolojisi sorularını tekrar et."],
 "Temel Mat.":["Her gün 25 problem sorusu çöz.","Yanlışlarını ertesi sabah tekrar çöz."],
-"Fen":["Zayıf konunun anlatımını izle, sonra 40 soru çöz.","Formül kartı hazırla ve her akşam bak."]};
-var AYT_D=[["D1",[[28,6],[8,3],[7,4],[8,3]]],["D2",[[30,5],[9,3],[8,4],[9,3]]],["D3",[[31,5],[10,3],[8,3],[9,3]]],["D4",[[30,6],[10,4],[9,3],[10,2]]],["D5",[[33,4],[11,2],[9,3],[10,2]]]];
-var D=[["D1",[[26,8],[10,5],[18,12],[8,6]]],["D2",[[28,7],[11,5],[20,10],[9,5]]],["D3",[[30,6],[12,4],[22,9],[10,5]]],["D4",[[29,7],[12,5],[21,10],[11,4]]],["D5",[[31,6],[13,4],[24,8],[12,4]]]];
-function $(i){return document.getElementById(i)}
-var S={TYT:{ad:AD,top:TOP,d:D},AYT:{ad:["Matematik","Fizik","Kimya","Biyoloji"],top:[40,14,13,13],d:AYT_D}},T="TYT";
+"Fen":["Zayıf konunun anlatımını izle, sonra 40 soru çöz.","Formül kartı hazırla ve her akşam bak."],
+"Edebiyat":["Her gün 20 edebiyat sorusu çöz, yanlışlarını not et.","Dönem ve akım özetlerini haftada bir tekrar et."],
+"Tarih":["Kronolojiyi şemaya dök ve haftada bir tekrar et.","Her konu sonunda 15 soru çöz."],
+"Coğrafya":["Harita ve görsel yorumlama sorularına ağırlık ver.","Her konu sonunda 15 soru çöz."],
+"Felsefe ve Din":["Kavram kartı hazırla, her akşam gözden geçir.","Konu başına 20 soru çöz."],
+"Yabancı Dil":["Her gün 20 yeni kelime çalış ve tekrar et.","Haftada 3 paragraf ve 2 çeviri seti çöz."]};
+
+var S={TYT:{ad:["Türkçe","Sosyal","Temel Mat.","Fen"],top:[40,20,40,20],d:SAVED_D.TYT},AYT:{ad:["Matematik","Fizik","Kimya","Biyoloji"],top:[40,14,13,13],d:SAVED_D.AYT}},T="TYT";
+var D=S.TYT.d;
 var KN={TYT:[["Problemler","Temel Mat.",38],["Elektrik ve manyetizma","Fen",42],["Fonksiyonlar","Temel Mat.",55],["Paragraf","Türkçe",71],["Coğrafya: iklim","Sosyal",64]],AYT:[["Türev","Matematik",36],["İntegral","Matematik",44],["Organik kimya","Kimya",48],["Dalgalar","Fizik",52],["Hücre bölünmesi","Biyoloji",74]]};
-function f(n){return (Math.round(n*100)/100).toString().replace(".",",")}
-function nt(v){return v[0]-v[1]/4}
-function tot(e){return e[1].reduce(function(s,v){return s+nt(v)},0)}
 $("gun").textContent=new Date().toLocaleDateString("tr-TR",{weekday:"long",day:"numeric",month:"long"});
 
-function render(){
- var e=D[D.length-1],p=D[D.length-2],t=tot(e),dt=p?t-tot(p):0;
- $("ad").textContent="Son deneme: "+e[0]+" · "+T+(T==="AYT"&&P&&P.al?" ("+P.al+")":"")+" neti";$("ekle").textContent=T+" denemesi ekle";
- $("net").textContent=f(t);
- $("dl").textContent=(dt>=0?"+":"")+f(dt);$("dl").style.color=dt>=0?"var(--ok)":"var(--bad)";
- $("hb").style.width=Math.min(t/HEDEF*100,100)+"%";
- $("hk").textContent="Hedef "+HEDEF+" net · "+f(Math.max(HEDEF-t,0))+" net kaldı";
- var h="",w=0,wr=2;
- AD.forEach(function(a,i){var v=e[1][i],r=nt(v)/TOP[i],c=r<.6?"var(--bad)":r<.75?"var(--warn)":"var(--ok)";
-  if(r<wr){wr=r;w=i}
-  h+='<div class="ders" role="button" tabindex="0" data-i="'+i+'" aria-label="'+a+' ayrıntıları"><span class="mut">'+a+'</span><br><b>'+f(nt(v))+'</b><span class="mut"> / '+(P?"hedef "+hh()[i]:TOP[i])+'</span><div class="bar"><i style="width:'+r*100+'%;background:'+c+'"></i></div><span class="mut">%'+Math.round(r*100)+' başarı</span></div>'});
- $("dersler").innerHTML=h;
- var wa=AD[w],c='<p>En çok net kaybın <b>'+wa+'</b> dersinde (%'+Math.round(wr*100)+' başarı). '+(dt>=0?"Genel gidişat iyi, tempoyu koru.":"Bu denemede düşüş var; paniğe gerek yok, aşağıdaki plana odaklan.")+'</p><ul>';
- TIP[wa].forEach(function(x){c+="<li>"+x+"</li>"});
- c+="<li>Hafta sonu tam bir "+T+" denemesi çöz ve yanlışlarını analiz et.</li></ul>";
- $("coach").innerHTML=c;ek(e);ck(e);pl(e);kr(e);kz(e);cnR();hr(e);
- /* trend */
- var W=340,H=150,m=26,mx=TOP.reduce(function(s,x){return s+x},0),mn=Math.max(0,Math.floor(Math.min(HEDEF,tot(D[0]))/10)*10-10),s="",pts=D.map(function(x,i){return [m+6+i*(W-m-24)/Math.max(D.length-1,1),H-m-(tot(x)-mn)/(mx-mn)*(H-2*m),x[0],tot(x)]});
- var hy=H-m-(HEDEF-mn)/(mx-mn)*(H-2*m);
- s+='<line x1="'+m+'" x2="'+(W-6)+'" y1="'+hy+'" y2="'+hy+'" stroke="var(--ok)" stroke-dasharray="4 4"/><text x="'+(W-58)+'" y="'+(hy-4)+'" style="fill:var(--ok)">Hedef '+HEDEF+'</text>';
- s+='<line x1="'+m+'" x2="'+(W-6)+'" y1="'+(H-m)+'" y2="'+(H-m)+'" stroke="var(--line)"/><polygon fill="var(--pri)" opacity=".09" points="'+pts.map(function(q){return q[0]+","+q[1]}).join(" ")+" "+pts[pts.length-1][0]+","+(H-m)+" "+pts[0][0]+","+(H-m)+'"/>';s+='<polyline fill="none" stroke="var(--pri)" stroke-width="3" stroke-linejoin="round" points="'+pts.map(function(q){return q[0]+","+q[1]}).join(" ")+'"/>';
- pts.forEach(function(q){s+='<circle cx="'+q[0]+'" cy="'+q[1]+'" r="4" fill="var(--sf)" stroke="var(--pri)" stroke-width="2.5"/><text x="'+(q[0]-8)+'" y="'+(H-6)+'">'+q[2]+'</text><text x="'+(q[0]-9)+'" y="'+(q[1]-9)+'" style="fill:var(--ink);font-weight:700">'+f(q[3])+'</text>'});
- $("tr").innerHTML=s}
-render();
+function emptyEntry(){return["Henüz yok",AD.map(function(){return[0,0]})]}
 
-function ck(e){var rs=AD.map(function(a,i){return nt(e[1][i])/TOP[i]}),w=rs.indexOf(Math.min.apply(null,rs)),wa=AD[w],r=rs[w],p=D[D.length-2],t=tot(e),dt=p?t-tot(p):0,kk=KN[T],z=kk[0],rem=HEDEF-t;
+function render(){
+ var hasD=D.length>0;
+ var e=hasD?D[D.length-1]:emptyEntry();
+ var p=D.length>1?D[D.length-2]:null;
+ var t=hasD?tot(e):0;
+ var dt=p?t-tot(p):0;
+
+ $("ad").textContent=hasD?("Son deneme: "+e[0]+" · "+T+(T==="AYT"&&P&&P.al?" ("+P.al+")":"")+" neti"):("Henüz "+T+" denemesi eklenmedi");
+ $("ekle").textContent=T+" denemesi ekle";
+ $("net").textContent=hasD?f(t):"0";
+ if(p){
+   $("dl").hidden=false;
+   $("dl").textContent=(dt>=0?"+":"")+f(dt);
+   $("dl").style.color=dt>=0?"var(--ok)":"var(--bad)";
+ } else {
+   $("dl").hidden=true;
+ }
+ $("hb").style.width=Math.min(HEDEF>0?(t/HEDEF*100):0,100)+"%";
+ $("hk").textContent="Hedef "+HEDEF+" net · "+f(Math.max(HEDEF-t,0))+" net kaldı";
+
+ var h="",w=0,wr=2;
+ AD.forEach(function(a,i){
+  var v=e[1][i]||[0,0];
+  var r=hasD?(nt(v)/TOP[i]):0;
+  var c=!hasD?"var(--mut)":(r<.6?"var(--bad)":r<.75?"var(--warn)":"var(--ok)");
+  if(r<wr){wr=r;w=i}
+  var hedefDers=P&&hh()&&hh()[i]!==undefined?hh()[i]:TOP[i];
+  h+='<div class="ders" role="button" tabindex="0" data-i="'+i+'" aria-label="'+a+' ayrıntıları"><span class="mut">'+a+'</span><br><b>'+f(nt(v))+'</b><span class="mut"> / hedef '+hedefDers+'</span><div class="bar"><i style="width:'+Math.max(0,r*100)+'%;background:'+c+'"></i></div><span class="mut">'+(hasD?('%'+Math.round(r*100)+' başarı'):'Veri bekleniyor')+'</span></div>'
+ });
+ $("dersler").innerHTML=h;
+
+ ek(e,hasD);ck(e,hasD);pl(e);kr(e,hasD);kz(e,hasD);cnR();hr(e,hasD);
+
+ /* Grafik */
+ var W=340,H=150,m=26,mx=TOP.reduce(function(s,x){return s+x},0);
+ if(!hasD){
+   var hy0=H-m-(HEDEF/mx)*(H-2*m);
+   $("tr").innerHTML='<line x1="'+m+'" x2="'+(W-6)+'" y1="'+hy0+'" y2="'+hy0+'" stroke="var(--ok)" stroke-dasharray="4 4"/><text x="'+(W-62)+'" y="'+(hy0-4)+'" style="fill:var(--ok)">Hedef '+HEDEF+'</text><line x1="'+m+'" x2="'+(W-6)+'" y1="'+(H-m)+'" y2="'+(H-m)+'" stroke="var(--line)"/><text x="'+(W/2)+'" y="'+(H/2+6)+'" text-anchor="middle" style="fill:var(--mut);font-size:12px">İlk denemeni eklediğinde gelişim grafiğin burada oluşacak</text>';
+   return;
+ }
+ var allVals=D.map(tot).concat([HEDEF]);
+ var mn=Math.max(0,Math.floor(Math.min.apply(null,allVals)/10)*10-10);
+ var topVal=Math.max(mx,HEDEF+5);
+ var s="",pts=D.map(function(x,i){
+   var px=D.length===1?(W/2):(m+10+i*(W-m-30)/(D.length-1));
+   var py=H-m-((tot(x)-mn)/Math.max(1,topVal-mn))*(H-2*m);
+   return [px,py,x[0],tot(x)];
+ });
+ var hy=H-m-((HEDEF-mn)/Math.max(1,topVal-mn))*(H-2*m);
+ s+='<line x1="'+m+'" x2="'+(W-6)+'" y1="'+hy+'" y2="'+hy+'" stroke="var(--ok)" stroke-dasharray="4 4"/><text x="'+(W-62)+'" y="'+(hy-4)+'" style="fill:var(--ok)">Hedef '+HEDEF+'</text>';
+ s+='<line x1="'+m+'" x2="'+(W-6)+'" y1="'+(H-m)+'" y2="'+(H-m)+'" stroke="var(--line)"/>';
+ if(pts.length>1){
+   s+='<polygon fill="var(--pri)" opacity=".09" points="'+pts.map(function(q){return q[0]+","+q[1]}).join(" ")+" "+pts[pts.length-1][0]+","+(H-m)+" "+pts[0][0]+","+(H-m)+'"/>';
+   s+='<polyline fill="none" stroke="var(--pri)" stroke-width="3" stroke-linejoin="round" points="'+pts.map(function(q){return q[0]+","+q[1]}).join(" ")+'"/>';
+ }
+ pts.forEach(function(q){s+='<circle cx="'+q[0]+'" cy="'+q[1]+'" r="4.5" fill="var(--sf)" stroke="var(--pri)" stroke-width="2.5"/><text x="'+q[0]+'" y="'+(H-6)+'" text-anchor="middle">'+q[2]+'</text><text x="'+q[0]+'" y="'+(q[1]-10)+'" text-anchor="middle" style="fill:var(--ink);font-weight:700">'+f(q[3])+'</text>'});
+ $("tr").innerHTML=s;
+}
+
+function ck(e,hasD){
+ var im='<img class="tgi" alt="Togi" src="'+(typeof MS==="string"?MS:"")+'">';
+ if(!hasD){
+   $("coach").innerHTML='<div class="ckh">'+im+'<div class="ckb">Hoş geldin'+(P?' <b>'+esc(P.ad)+'</b>':'')+'! Henüz '+T+' denemesi girmedin. Yukarıdaki <b>"'+T+' denemesi ekle"</b> butonuna basarak ilk deneme sonuçlarını gir; netlerini, eksiklerini ve haftalık çalışma planını birlikte oluşturalım.</div></div>';
+   return;
+ }
+ var rs=AD.map(function(a,i){return nt(e[1][i])/TOP[i]}),w=rs.indexOf(Math.min.apply(null,rs)),wa=AD[w],r=rs[w],p=D.length>1?D[D.length-2]:null,t=tot(e),dt=p?t-tot(p):0,kk=KN[T],z=kk[0],rem=HEDEF-t;
  kk.forEach(function(k){if(k[2]<z[2])z=k});
- var up=dt>=0,msg=up?"Harika gidiyorsun! Son denemede netin "+f(dt)+" arttı. Bu tempoyu koru, şimdi en zayıf yönüne odaklanalım.":"Bu denemede netin "+f(-dt)+" düştü ama endişelenme, bu herkesin başına gelir. Zayıf noktalarını buldum, birlikte toparlayacağız.",
+ var up=dt>=0,msg=!p?("İlk "+T+" denemeni kaydettin ("+f(t)+" net)! Şimdi en zayıf dersin olan "+wa+" üzerine odaklanıp hedefe doğru adım adım ilerleyelim."):(up?"Harika gidiyorsun! Son denemede netin "+f(dt)+" arttı. Bu tempoyu koru, şimdi en zayıf yönüne odaklanalım.":"Bu denemede netin "+f(-dt)+" düştü ama endişelenme, bu herkesin başına gelir. Zayıf noktalarını buldum, birlikte toparlayacağız."),
  tp=TIP[wa]||[],
  st=[[wa+": önce burayı toparla",tp[0]||"Her gün kısa bir tekrar yap."],[wa+": yanlışlarını yaz",tp[1]||"Yanlış yaptığın soruları ertesi gün tekrar çöz."],["Konu odağı: "+z[0],"Şu an %"+z[2]+" doğruluk. Konu anlatımını izle, ardından 30 soru çöz."],["Hafta sonu: "+T+" denemesi","Süreni tut, bitince yanlışlarını Togi’nin Savaş Kartları’yla tekrar et."]],
  cl=function(x){return x<.6?"var(--bad)":x<.75?"var(--warn)":"var(--ok)"};
- $("coach").innerHTML='<div class="ckh"><img class="tgi" alt="Togi" src="'+(typeof MS==="string"?MS:"")+'"><div class="ckb">'+msg+'</div></div>'+
-  '<div class="ckst"><div class="tl"><span class="mut">Son deneme</span><b>'+f(t)+' net</b><em style="color:'+(up?"var(--ok)":"var(--bad)")+'">'+(up?"▲ +":"▼ ")+f(dt)+'</em></div>'+
+ $("coach").innerHTML='<div class="ckh">'+im+'<div class="ckb">'+msg+'</div></div>'+
+  '<div class="ckst"><div class="tl"><span class="mut">Son deneme</span><b>'+f(t)+' net</b>'+(p?'<em style="color:'+(up?"var(--ok)":"var(--bad)")+'">'+(up?"▲ +":"▼ ")+f(dt)+'</em>':'<em style="color:var(--pri)">İlk kayıt</em>')+'</div>'+
   '<div class="tl"><span class="mut">En zayıf ders</span><b>'+wa+'</b><em style="color:'+cl(r)+'">%'+Math.round(r*100)+' başarı</em></div>'+
   '<div class="tl"><span class="mut">Öncelikli konu</span><b>'+z[0]+'</b><em style="color:'+cl(z[2]/100)+'">%'+z[2]+' doğruluk</em></div></div>'+
   '<p class="ckt">Bu hafta yapacakların</p><ol class="cks">'+st.map(function(s,i){return '<li><span class="n">'+(i+1)+'</span><div><b>'+s[0]+'</b><span class="mut">'+s[1]+'</span></div></li>'}).join("")+'</ol>'+
-  (rem>0?'<p class="ckg">Hedefine <b>'+f(rem)+' net</b> kaldı, adım adım yaklaşıyorsun.</p>':'<p class="ckg">Hedefine ulaştın, tebrikler! Şimdi netini korumaya bak.</p>')}
+  (rem>0?'<p class="ckg">Hedefine <b>'+f(rem)+' net</b> kaldı, adım adım yaklaşıyorsun.</p>':'<p class="ckg">Hedefine ulaştın, tebrikler! Şimdi netini korumaya bak.</p>');
+}
 
-/* Togi yerel mod: "yerel" = dış servis yok, "hibrit" = yerel cevap yoksa yapay zekâ sunucusuna sor, "claude" = hep yapay zekâ. */
+/* Togi yerel sohbet */
 var AI_MOD="yerel";
 function nz(s){return String(s).toLocaleLowerCase("tr").replace(/[çğıöşü]/g,function(c){return{"ç":"c","ğ":"g","ı":"i","ö":"o","ş":"s","ü":"u"}[c]}).replace(/[^a-z0-9 ]/g," ")}
 function hs(q,a){return a.some(function(w){return q.indexOf(w)>-1})}
-function tH(){var R=pL(),tp=TOP.reduce(ad2,0),e=D[D.length-1],gap=AD.map(function(a,i){return Math.max((P?hh()[i]:TOP[i]*.8)-nt(e[1][i]),0)}),sg=gap.reduce(ad2,0);
+function tH(){var R=pL(),tp=TOP.reduce(ad2,0),hasD=D.length>0,e=hasD?D[D.length-1]:emptyEntry(),gap=AD.map(function(a,i){return Math.max((P&&hh()?hh()[i]:TOP[i]*.8)-nt(e[1][i]),0)}),sg=gap.reduce(ad2,0);
  return AD.map(function(a,i){return{a:a,n:nt(e[1][i]),r:nt(e[1][i])/TOP[i],g:gap[i],h:R.wk*(.4*TOP[i]/tp+.6*(sg?gap[i]/sg:TOP[i]/tp))}}).sort(function(x,y){return x.r-y.r})}
 function pc(x){return "%"+Math.round(x*100)}
-function togiLocal(q0){var q=" "+nz(q0)+" ",nm=P?P.ad:"",e=D[D.length-1],t=tot(e),pv=D[D.length-2],dt=pv?t-tot(pv):0,rem=HEDEF-t,rs=tH(),w=rs[0],tp=TIP[w.a]||[],kk=KN[T].slice().sort(function(x,y){return x[2]-y[2]}),R=pL();
+function togiLocal(q0){var q=" "+nz(q0)+" ",nm=P?P.ad:"",hasD=D.length>0,e=hasD?D[D.length-1]:emptyEntry(),t=tot(e),pv=D.length>1?D[D.length-2]:null,dt=pv?t-tot(pv):0,rem=HEDEF-t,rs=tH(),w=rs[0],tp=TIP[w.a]||[],kk=KN[T].slice().sort(function(x,y){return x[2]-y[2]}),R=pL();
  if(hs(q,[" intihar","olmek istiyorum","kendime zarar","yasamak istemiyorum"]))return "Bunu benimle paylaştığın için teşekkür ederim. Bu kadar zorlandığını duymak beni üzdü, yalnız değilsin. Lütfen şu an güvendiğin bir yetişkinle (aile, öğretmen, rehber öğretmen) konuş. Kendine zarar verme düşüncen varsa ya da acil bir durumdaysan hemen 112’yi ara.";
  if(hs(q,[" tesekkur"," sag ol"," eyvallah"]))return "Rica ederim "+nm+"! Ben hep buradayım. Hazırsan bir savaş kartı daha çözelim.";
  if(hs(q,[" kimsin"," adin ne"," sen nesin"]))return "Ben Togi, YKS çalışma asistanınım. Netlerine, zayıf derslerine ve planına bakarak sana yol gösteriyorum, formül ve kavram kartlarıyla da tekrar yaptırıyorum.";
  if(hs(q,[" merhaba"," selam"," naber"," gunaydin"]))return "Selam "+nm+"! Netlerin, zayıf derslerin, çalışma planın ya da bir formül veya kavram hakkında bana soru sorabilirsin.";
  var kb=togiKB(q,w,t,dt,rem,nm);if(kb)return kb;
- if(hs(q,[" moral"," motivasyon"," yoruldum"," bikt"," sikildim"," stres"," kaygi"," korkuyorum"," umutsuz"]))return "Zor bir dönemden geçtiğini anlıyorum, bunu hissetmen çok normal. YKS bir maraton, sprint değil. Bugün sadece küçük bir adım at: "+w.a+" için 25 dakikalık tek bir tur çalış, sonra 5 dakika dinlen. Bir savaş kartı çözmek de güzel bir başlangıç. Başarabilirsin.";
+ if(!hasD&&hs(q,[" net"," deneme"," zayif"," eksik"," hedef"," neye calis"," plan"]))return nm+", henüz "+T+" denemesi girmedin. Önce ana sayfadaki '"+T+" denemesi ekle' butonundan sonuçlarını gir; netlerini ve eksiklerini analiz edip sana özel plan çıkarayım.";
+ if(hs(q,[" moral"," motivasyon"," yoruldum"," bikt"," sikildim"," stres"," kaygi"," korkuyorum"," umutsuz"]))return "Zor bir dönemden geçtiğini anlıyorum, bunu hissetmen çok normal. YKS bir maraton, sprint değil. Bugün sadece küçük bir adım at: "+w.a+" için 25 dakikalık tek bir tur çalış, sonra 5 dakika dinlen. Başarabilirsin.";
  if(q.indexOf(" net")>-1&&hs(q,[" artir"," yukselt"," nasil"]))return "Netini artırmak için üç şey:\n1) En çok net kaybettiğin ders "+w.a+" ("+pc(w.r)+" başarı), önce burayı toparla. "+(tp[0]||"")+"\n2) Her denemeden sonra yanlışlarını yaz, ertesi gün tekrar çöz.\n3) Haftada bir tam "+T+" denemesi çöz, süreyi tut.\n"+(rem>0?"Hedefine "+f(rem)+" net kaldı, adım adım yaklaşıyorsun.":"Hedefine ulaştın, şimdi netini koru!");
- if(hs(q,[" zayif"," eksik"," kotu"," dusuk"," sorun"," hangi ders"," hangi konu"," hata"]))return "Derslerini zayıftan güçlüye sıraladım:\n"+rs.slice(0,3).map(function(x){return x.a+": "+pc(x.r)+" başarı"}).join("\n")+"\nZayıf konuların: "+kk.slice(0,3).map(function(k){return k[0]+" (%"+k[2]+")"}).join(", ")+".\nBu dersler için Togi’nin Savaş Kartları’nda tekrar yapabilirsin.";
- if(hs(q,[" hedef"," kac net kaldi"," kalan"]))return nm+", şu an "+f(t)+" netsin (son denemede "+(dt>=0?"+":"")+f(dt)+"). Hedefin "+HEDEF+" net; "+(rem>0?f(rem)+" net kaldı.":"hedefine ulaştın, tebrikler!")+" En çok net kazandıracak ders: "+w.a;
- if(hs(q,[" saat"," sure"," dakika"," ne kadar calis"]))return "Haftalık "+R.wk+" saatlik çalışma sürene göre önerim:\n"+rs.slice(0,3).map(function(x){return x.a+": haftada "+sa(x.h)+" sa (günde ≈ "+Math.round(x.h/6*12)*5+" dk)"}).join("\n")+"\nToplam süreni Çalışma süreleri sayfasından değiştirebilirsin.";
- if(hs(q,[" neye calis"," ne calis"," ne yapayim"," plan"," program"," bu hafta"]))return (ZR.length?"Önce zorunlu savaş kartlarını bitir: "+ZR.join(", ")+".\n":"")+"Bu hafta "+rs.slice(0,2).map(function(x){return x.a+" ("+pc(x.r)+")"}).join(" ve ")+(rs.length>1?" derslerine":" dersine")+" odaklan.\n1) "+w.a+": "+(tp[0]||"Her gün kısa tekrar yap.")+" (haftada ~"+sa(w.h)+" sa)\n2) Konu: "+kk[0][0]+" (%"+kk[0][2]+" doğruluk), konu anlatımı ve 30 soru.\n3) Hafta sonu bir "+T+" denemesi çöz.\nGörevlerini Haftalık program sayfasına ekleyebilirsin.";
- if(hs(q,[" deneme"," netim"," son net"]))return "Son denemende "+f(t)+" net yaptın ("+(dt>=0?"+":"")+f(dt)+"). En güçlü dersin "+rs[rs.length-1].a+" ("+pc(rs[rs.length-1].r)+"), en zayıf dersin "+w.a+" ("+pc(w.r)+").";
+ if(hs(q,[" zayif"," eksik"," kotu"," dusuk"," sorun"," hangi ders"," hangi konu"," hata"]))return "Derslerini zayıftan güçlüye sıraladım:\n"+rs.slice(0,3).map(function(x){return x.a+": "+pc(x.r)+" başarı"}).join("\n")+"\nZayıf konuların: "+kk.slice(0,3).map(function(k){return k[0]+" (%"+k[2]+")"}).join(", ")+".";
+ if(hs(q,[" hedef"," kac net kaldi"," kalan"]))return nm+", şu an "+f(t)+" netsin. Hedefin "+HEDEF+" net; "+(rem>0?f(rem)+" net kaldı.":"hedefine ulaştın, tebrikler!")+" En çok net kazandıracak ders: "+w.a;
+ if(hs(q,[" saat"," sure"," dakika"," ne kadar calis"]))return "Haftalık "+R.wk+" saatlik çalışma sürene göre önerim:\n"+rs.slice(0,3).map(function(x){return x.a+": haftada "+sa(x.h)+" sa (günde ≈ "+Math.round(x.h/6*12)*5+" dk)"}).join("\n");
+ if(hs(q,[" neye calis"," ne calis"," ne yapayim"," plan"," program"," bu hafta"]))return "Bu hafta "+rs.slice(0,2).map(function(x){return x.a+" ("+pc(x.r)+")"}).join(" ve ")+(rs.length>1?" derslerine":" dersine")+" odaklan.\n1) "+w.a+": "+(tp[0]||"Her gün kısa tekrar yap.")+" (haftada ~"+sa(w.h)+" sa)\n2) Konu: "+kk[0][0]+" (%"+kk[0][2]+" doğruluk), konu anlatımı ve 30 soru.\n3) Hafta sonu bir "+T+" denemesi çöz.";
+ if(hs(q,[" deneme"," netim"," son net"]))return "Son denemende "+f(t)+" net yaptın. En güçlü dersin "+rs[rs.length-1].a+" ("+pc(rs[rs.length-1].r)+"), en zayıf dersin "+w.a+" ("+pc(w.r)+").";
  var sw=["nedir","nasil","nelerdir","formul","formulu","hangi","icin","kart","bana","soyle","anlat","hesaplanir","bulunur","ile","bir"],tk=nz(q0).split(" ").filter(function(x){return x.length>2&&sw.indexOf(x)<0}),best=null,bs=0;
  if(tk.length)Object.keys(BANK).forEach(function(d){BANK[d].forEach(function(c){var hay=nz(c[0]+" "+c[1]+" "+d),s=tk.filter(function(x){return hay.indexOf(x)>-1}).length;if(s>bs){bs=s;best=[d,c]}})});
  if(best)return best[0]+" kartı:\n"+best[1][0]+"\nCevap: "+best[1][1]+"\nİpucu: "+best[1][2]+"\nNe işe yarar: "+best[1][3];
- return "Bunu tam anlayamadım ya da bu konuda yeterli bilgim yok. Bana şunları sorabilirsin: bu hafta neye çalışmalıyım, zayıf derslerim, hedefime kaç net kaldı, günde kaç saat çalışmalıyım ya da bir formül veya kavram adı (örneğin türev, mol, enlem), uyku, telefon, odaklanma, sınav günü ya da moral konularında da konuşabiliriz."}
+ return "Bana şunları sorabilirsin: bu hafta neye çalışmalıyım, zayıf derslerim, hedefime kaç net kaldı, günde kaç saat çalışmalıyım ya da bir formül veya kavram adı (örneğin türev, mol, enlem), uyku, telefon, odaklanma, sınav günü ya da moral konularında konuşabiliriz."}
 
 function togiKB(q,w,t,dt,rem,nm){var pick=function(a){return a[Math.floor(Math.random()*a.length)]};
  var L=[
  [[" soz "," guzel soz"," motivasyon sozu"," ilham"],["“Bugünkü emek, yarınki rahatlıktır.”","“Küçük adımlar, büyük farklar yaratır.”","“Zor olan başlamaktır; başladıysan yarısı bitti.”","“Vazgeçmek kolaydır, devam etmek kazandırır.”"].map(function(x){return x+"\nHadi "+nm+", bugün bir adım daha."})],
  [[" nasilsin"," ne yapiyorsun"],["İyiyim, seninle çalışmak bana enerji veriyor! Sen nasılsın? Bugün ne çalışmayı düşünüyorsun?"]],
  [[" saka"," fikra"," espri"],["Timsah neden iyi öğrenci olur? Çünkü her denemede dişini sıkar! Hadi şimdi bir savaş kartı çözelim."]],
- [[" uyku"," uyu"," uyuyam"],["Uyku çalışmanın bir parçası: gün içinde öğrendiklerin uykuda beynine yerleşiyor. Her gece 7-8 saat uyumaya çalış, yatmadan 30 dakika önce ekranı kapat ve yatma saatini sabit tut.","Uykusuz çözülen 50 soru, dinlenmiş kafayla çözülen 25 sorudan genelde daha az verim verir. Yatma ve kalkma saatini hep aynı tut, akşamın geç saatlerinde çay ve kahveyi azalt."]],
- [[" yemek"," beslen"," kahvalt"," su ic"," enerji"," acik"],["Beyin de enerjiyle çalışır: güne kahvaltıyla başla ve gün boyu bol su iç. Çalışırken şekerli atıştırmalık yerine ceviz, fındık, meyve ya da yoğurt tercih et. Aç ya da aşırı tok karnına çalışmak verimini düşürür."]],
- [[" telefon"," instagram"," tiktok"," sosyal medya"," youtube"," oyun"],["Telefon en büyük rakibin. Çalışırken başka odaya bırak ya da uçak moduna al, bildirimleri kapat. 25 dakika çalış, 5 dakika mola ver; telefona sadece molada bak.","Telefonu bırakamamak çok yaygın, sorun sende değil: o uygulamalar tam bunun için tasarlandı. Küçük bir anlaşma yap: her 2 saatlik çalışmadan sonra 15 dakika serbest telefon."]],
- [[" odak"," konsantr"," dikkatim"," dagil"],["Odaklanmak için masanı sadeleştir: sadece o anki dersin kitabı ve kalem kalsın. Tek hedef koy: “Bu 25 dakikada 15 problem çözeceğim.” Aklına gelen başka işleri bir kağıda yaz, sonra bak."]],
- [[" erteli"," erteleme"," baslayam"," tembel"],["Başlamak en zor kısım. 5 dakika kuralını dene: sadece 5 dakika çalışacağını söyle, sonra devam edip etmeyeceğine karar ver. Çoğu zaman başlayınca devam edersin. Saatini ve yerini önceden belirle: “Akşam 19.00, masada, 20 problem.”"]],
- [[" nasil calis"," calisma teknigi"," ezber"," unutuyorum"," hafiza"],["Etkili tekrar için üç kural: 1) Okumak yerine hatırlamaya çalış (Savaş Kartları tam bunun için). 2) Tekrarları aralıklarla yap: 1., 3. ve 7. gün. 3) Öğrendiğini birine anlatmayı dene; anlatamıyorsan konu tam oturmamış demektir."]],
- [[" sinav gunu"," sinav sabah"," sinava giri"],["Sınav günü için: önceki akşam sınav giriş belgeni, kimliğini ve kalemlerini hazırla, erken yat. Sabah hafif kahvaltı yap, sınav yerine erken git. Zor bir soruda takılma, işaretleyip geç, sonra dön. Heyecanlanırsan 4 saniye nefes al, 6 saniye ver; 5 kez tekrarla."]],
- [[" heyecan"," panik"," sinav kaygi"," korkuyorum"," kaygi"],["Sınav heyecanı normal, bir miktarı performansa bile yardımcı olur. Panik başlarsa dur, 4 saniye nefes al, 6 saniye ver. Deneme çözerken süre ve sessizlik gibi sınav koşullarını da çalış ki o gün tanıdık gelsin. Çok yoğunsa rehber öğretmenle konuşmak iyi gelir."]],
- [[" gunluk"," bugun"," zaman yonet"," rutin"],["Örnek bir gün: sabah 2 blok (25+5) en zayıf ders, öğleden sonra 2 blok soru çözümü, akşam 1 blok tekrar ve Savaş Kartları. Her blokta tek konu, gün sonunda 5 dakika yanlışlarını not al. Görevlerini Haftalık program sayfasına ekleyebilirsin."]],
- [[" mola"," dinlen"," spor"," yuru"," egzersiz"],["Dinlenmek zaman kaybı değil, planın parçası. Her 25-50 dakikada bir mola ver, ayağa kalk, su iç, esne. Haftada birkaç gün 20-30 dakika yürüyüş kafanı tazeler. Haftada bir yarım gün tam dinlen."]],
- [[" aile"," annem"," babam"," baski"," kiyasla"," arkadas"," rakip"],["Başkalarının netleriyle değil, kendi dünkü netinle yarış. Aile baskısını hissediyorsan hedeflerini ve planını onlara göstermek (bu uygulamadaki özet gibi) kaygılarını azaltabilir. “Bu hafta şu üç şeyi yapacağım” demek de iyi bir başlangıç."]],
- [[" deneme kotu"," neti dustu"," net dustu"," dustu"," dusus"],["Bir deneme seni tanımlamaz. Yanlışlarını üç gruba ayır: bilgi eksiği, dikkat hatası, süre sorunu. Her grup için ayrı bir çözüm planla. "+w.a+" dersi bu hafta öncelikli."]],
- [[" ne kadar kaldi"," kac gun kaldi"," gun kaldi"," sinava ne kadar"," sinava kac"," sayac"],[kalanMetin()]],
- [[" zzz_kullanilmaz"],["Sınav tarihini ÖSYM’nin güncel takviminden kontrol et. Kalan günü haftalara böl ve her hafta için küçük hedefler koy; bunları Haftalık program sayfasına da ekleyebilirsin."]],
- [[" kaynak"," kitap"," yayin"],["Kaynak seçerken üç şeye bak: konu anlatımı, bol soru çözümlü kitap ve gerçek sınav formatına yakın denemeler. Marka önermem; öğretmenine ya da rehber öğretmenine danışıp tek bir kaynak seti seç, çok kaynak değiştirmek zaman kaybettirir."]],
- [[" zorunlu"],["Bir dersteki başarın %50’nin altına düşerse o ders için Togi’nin Savaş Kartları zorunlu olur. Kartları bitirmeden yeni deneme ekleyemezsin; böylece en zayıf noktana önce odaklanırsın."]],
- [[" savas kart"," kart nedir"],["Togi’nin Savaş Kartları, haftalık zayıf derslerine göre hazırlanan tekrar kartlarıdır. Sayısal derslerde formül, sözel derslerde kavram kartı çıkar. Kartı çevirip cevabı görür, “Biliyorum” ya da “Bilemedim” dersin; bilemediklerin ipucuyla tekrar karşına gelir."]],
- [[" deneme ekle"," nasil yukle"," nasil ekle"," deneme yukle"," fotograf"],["Ana ekrandaki “Deneme ekle” butonuna bas, sonuç belgesinin ya da optik formun fotoğrafını çek. Dersler ve doğru/yanlış sayıları okunup tablo olarak gösterilir; doğruysa kaydet. Fotoğraf net olmalı ve tablonun tamamı görünmeli."]],
- [[" basim agri"," hasta"," ates"," midem"],["Kendini iyi hissetmiyorsan çalışmaya ara ver, dinlen ve su iç. Tıbbi tavsiye veremem; devam ederse bir doktora ya da ailenden birine söyle."]]
+ [[" uyku"," uyu"," uyuyam"],["Uyku çalışmanın bir parçası: gün içinde öğrendiklerin uykuda beynine yerleşiyor. Her gece 7-8 saat uyumaya çalış, yatmadan 30 dakika önce ekranı kapat ve yatma saatini sabit tut."]],
+ [[" yemek"," beslen"," kahvalt"," su ic"," enerji"," acik"],["Beyin de enerjiyle çalışır: güne kahvaltıyla başla ve gün boyu bol su iç. Çalışırken şekerli atıştırmalık yerine ceviz, fındık, meyve ya da yoğurt tercih et."]],
+ [[" telefon"," instagram"," tiktok"," sosyal medya"," youtube"," oyun"],["Telefon en büyük rakibin. Çalışırken başka odaya bırak ya da uçak moduna al, bildirimleri kapat. 25 dakika çalış, 5 dakika mola ver; telefona sadece molada bak."]],
+ [[" odak"," konsantr"," dikkatim"," dagil"],["Odaklanmak için masanı sadeleştir: sadece o anki dersin kitabı ve kalem kalsın. Tek hedef koy: “Bu 25 dakikada 15 problem çözeceğim.”"]],
+ [[" erteli"," erteleme"," baslayam"," tembel"],["Başlamak en zor kısım. 5 dakika kuralını dene: sadece 5 dakika çalışacağını söyle, sonra devam edip etmeyeceğine karar ver."]],
+ [[" ne kadar kaldi"," kac gun kaldi"," gun kaldi"," sinava ne kadar"," sinava kac"," sayac"],[kalanMetin()]]
  ];
  for(var i=0;i<L.length;i++)if(hs(q,L[i][0]))return pick(L[i][1]);
- if(hs(q,[" yapamiyorum"," yapamam"," basaramam"," basaramayacagim"," basaramiyorum"," zor "," zorlan"," olmuyor"," vazgec"," calisasim yok"," calismak istemiyorum"," anlamiyorum"," ogrenemiyorum"," yetersiz"," geri kaldim"," gec kaldim"," moral"," motivasyon"," yoruldum"," bikt"," sikildim"," umutsuz"])){
-  var M=[
-   "Zor olduğunu biliyorum, ama zor olması yanlış yolda olduğun anlamına gelmez; çoğu zaman doğru yolda ilerlediğinin işaretidir. Bugün sadece 20 dakika, tek bir konu. Başlamak, bitirmekten çok daha küçük bir iş.",
-   "“Yapamıyorum” yerine “henüz yapamıyorum” de. Beyin tekrar ettikçe güçlenir. "+w.a+" dersin biraz geride, ama bu, kapanabilecek bir fark. Bugün sadece 10 soru çöz.",
-   "Her büyük sonuç, sıkıcı küçük günlerin toplamıdır. Bugün: 1 konu, 10 soru, 1 kart. Sadece bu kadar. Akşam baktığında “yaptım” diyeceksin.",
-   "Yorulmak, çalıştığının kanıtı. Şimdi 10 dakika mola ver, su iç, sonra 25 dakikalık tek bir tur. Mükemmel olmak zorunda değilsin, devam etmek yeterli.",
-   (dt>0?"Son denemede netini "+f(dt)+" artırdın, bu senin emeğin. ":"Kendini başkalarıyla değil, dünkü kendinle kıyasla. ")+"Hedefin "+HEDEF+" net, şu an "+f(t)+": aradaki fark kapanabilir bir fark. Bir adım daha.",
-   "Pes etmek istediğin an genelde ilerlemenin tam ortasıdır. Zorlandığın her soru, beyninin yeni bir bağlantı kurduğu andır. Takıldığın yeri bir kenara yaz, sonra tekrar dön.",
-   "Bugün kötü geçtiyse yarın yeni bir sayfa. Şunu yap: yarın sabah için masana 3 görev hazırla. Gerisi kolay gelir."
-  ];
-  var mm=pick(M);return nm+", "+mm.charAt(0).toLocaleLowerCase("tr")+mm.slice(1)+" İstersen şimdi tek bir savaş kartı çözelim."}
  return ""}
 
 /* zayıf nokta pekiştirme (20 soru) */
@@ -663,56 +696,41 @@ var GEN={
 "Problemler":[
  function(){var v=ri(4,12)*10,t=ri(2,6);return mk("Bir araç sabit "+v+" km/sa hızla "+t+" saat giderse kaç km yol alır?",v*t,[v+t,v*(t+1),v*t/2],"Yol = hız × zaman.",v+" × "+t+" = "+v*t+" km.")},
  function(){var p=ri(2,15)*20,x=pk([10,20,25,30,40,50]);return mk("Etiket fiyatı "+p+" TL olan bir ürüne %"+x+" indirim yapılıyor. Yeni fiyat kaç TL olur?",p*(100-x)/100,[p-x,p*x/100,p*(100+x)/100],"İndirimli fiyat = fiyat × (100 − indirim) / 100.",p+" × "+(100-x)+" / 100 = "+p*(100-x)/100+" TL.")},
- function(){var pr=pk([[12,6],[20,5],[30,20],[6,3],[15,10],[24,8],[12,4],[18,9]]),a=pr[0],b=pr[1];return mk("A ustası bir işi tek başına "+a+" günde, B ustası "+b+" günde bitiriyor. İkisi birlikte çalışırsa iş kaç günde biter?",a*b/(a+b),[(a+b)/2,a+b,Math.abs(a-b)],"Birlikte günlük iş = 1/a + 1/b.","Süre = (a·b)/(a+b) = "+a*b+"/"+(a+b)+" = "+fm(a*b/(a+b))+" gün.")},
- function(){var m=ri(10,30),x=0;do{x=ri(10,60)}while((5*m+x)%6!==0);return mk("5 sayının aritmetik ortalaması "+m+" ise bu sayılara "+x+" eklenirse 6 sayının ortalaması kaç olur?",(5*m+x)/6,[m,(m+x)/2,(5*m+x)/5],"Ortalama = toplam / adet.","Toplam 5·"+m+" = "+5*m+"; yeni toplam "+(5*m+x)+"; ortalama "+(5*m+x)/6+".")},
- function(){var v=ri(8,20),d=ri(4,10),k=ri(2,5),S=2*v+d+2*k;return mk("Ali, Veli’den "+d+" yaş büyüktür. "+k+" yıl sonra ikisinin yaşları toplamı "+S+" olacağına göre Ali’nin şimdiki yaşı kaçtır?",v+d,[v,v+d+k,v+k],"Şimdiki yaşlar toplamı = "+S+" − 2·"+k+".","Şimdiki toplam "+(S-2*k)+" = 2·Veli + "+d+" → Veli "+v+", Ali "+(v+d)+".")}
+ function(){var pr=pk([[12,6],[20,5],[30,20],[6,3],[15,10],[24,8],[12,4],[18,9]]),a=pr[0],b=pr[1];return mk("A ustası bir işi tek başına "+a+" günde, B ustası "+b+" günde bitiriyor. İkisi birlikte çalışırsa iş kaç günde biter?",a*b/(a+b),[(a+b)/2,a+b,Math.abs(a-b)],"Birlikte günlük iş = 1/a + 1/b.","Süre = (a·b)/(a+b) = "+a*b+"/"+(a+b)+" = "+fm(a*b/(a+b))+" gün.")}
 ],
 "Fonksiyonlar":[
  function(){var a=ri(2,5),b=ri(-4,6),c=ri(1,6);return mk("f(x) = "+lin(a,b)+" ise f("+c+") kaçtır?",a*c+b,[a+c+b,a*c-b,(a+b)*c],"x yerine "+c+" yaz.","f("+c+") = "+a+"·"+c+" "+sg(b)+" = "+(a*c+b)+".")},
- function(){var m=ri(2,4),n=ri(-3,3),p=ri(1,4),c=ri(1,3);return mk("f(x) = "+lin(m,n)+" ve g(x) = x² + "+p+" ise (f∘g)("+c+") kaçtır?",m*(c*c+p)+n,[Math.pow(m*c+n,2)+p,m*c*c+n+p,m*(c+p)+n],"(f∘g)(x) = f(g(x)): önce g’yi hesapla.","g("+c+") = "+(c*c+p)+"; f("+(c*c+p)+") = "+(m*(c*c+p)+n)+".")},
- function(){var a=ri(2,6),b=ri(1,5),c=ri(1,5);return mk("f(x) = a·x + "+b+" ve f("+c+") = "+(a*c+b)+" ise a kaçtır?",a,[a+1,a*c,c],"f("+c+") ifadesinde x yerine "+c+" yaz.","a·"+c+" + "+b+" = "+(a*c+b)+" → a = "+a+".")},
  function(){var a=ri(2,5),b=ri(1,6),x0=ri(1,6),r=a*x0+b;return mk("f(x) = "+lin(a,b)+" ise f⁻¹("+r+") kaçtır?",x0,[r-b,a*r+b,(r+b)/a],"f⁻¹(r) = x demek f(x) = r demektir.",a+"x + "+b+" = "+r+" → x = "+x0+".")}
 ],
 "Türev":[
  function(){var a=ri(1,4),n=pk([2,3]),b=ri(-5,5),c=ri(1,6),k=ri(1,3);return mk("f(x) = "+(a===1?"":a)+"x"+(n===3?"³":"²")+" "+sg(b)+"x + "+c+" ise f′("+k+") kaçtır?",a*n*Math.pow(k,n-1)+b,[a*Math.pow(k,n)+b*k+c,a*n*Math.pow(k,n)+b,a*Math.pow(k,n-1)+b],"(xⁿ)′ = n·xⁿ⁻¹ ve sabitin türevi 0’dır.","f′(x) = "+a*n+"x"+(n===3?"²":"")+" "+sg(b)+" → f′("+k+") = "+(a*n*Math.pow(k,n-1)+b)+".")},
- function(){var p=ri(-4,6),k=ri(1,5);return mk("y = x² "+sg(p)+"x eğrisine x = "+k+" noktasında çizilen teğetin eğimi kaçtır?",2*k+p,[k*k+p*k,2*k,k+p],"Teğetin eğimi, o noktadaki türev değeridir.","y′ = 2x "+sg(p)+" → y′("+k+") = "+(2*k+p)+".")},
- function(){var p=ri(1,5)*2,q=ri(1,9);return mk("f(x) = x² − "+p+"x + "+q+" fonksiyonu en küçük değerini hangi x değerinde alır?",p/2,[p,-p/2,p*p],"Yerel ekstremumda türev sıfırdır.","f′(x) = 2x − "+p+" = 0 → x = "+p/2+".")},
- function(){var a=ri(1,4),k=ri(1,4);return mk("f(x) = (x + "+a+")² ise f′("+k+") kaçtır?",2*(k+a),[(k+a)*(k+a),2*k+a,2*k],"Zincir kuralı: (u²)′ = 2u·u′.","f′(x) = 2(x + "+a+") → f′("+k+") = "+2*(k+a)+".")},
  function(){var a=ri(2,7);return mk("f(x) = "+a+"x³ ise f′(1) kaçtır?",3*a,[a,a+3,3],"(x³)′ = 3x².","f′(x) = "+3*a+"x² → f′(1) = "+3*a+".")}
 ],
 "İntegral":[
  function(){var k=ri(2,5),p=ri(1,6);return mk("0’dan "+k+"’e kadar (2x + "+p+") fonksiyonunun belirli integrali kaçtır?",k*k+p*k,[k*k+p,2*k+p,k*k+2*p*k],"∫(2x + p)dx = x² + p·x.",k+"² + "+p+"·"+k+" = "+(k*k+p*k)+".")},
- function(){var c=pk([3,6,9,12]),b=ri(2,3);return mk("0’dan "+b+"’e kadar "+c+"x² fonksiyonunun belirli integrali kaçtır?",c*b*b*b/3,[c*b*b,c*b*b*b,c*b*b/2],"∫c·x²dx = c·x³/3.",c+"·"+b+"³/3 = "+c*b*b*b/3+".")},
- function(){var a=pk([3,6,9]),b=pk([2,4,6]);return mk("0’dan 1’e kadar ("+a+"x² + "+b+"x) fonksiyonunun belirli integrali kaçtır?",a/3+b/2,[a+b,a/3+b,a/2+b/2],"Terim terim integral al: x² → x³/3, x → x²/2.",a+"/3 + "+b+"/2 = "+(a/3+b/2)+".")},
  function(){var c=ri(2,7),k=ri(3,6);return mk("1’den "+k+"’ya kadar sabit "+c+" fonksiyonunun belirli integrali kaçtır?",c*(k-1),[c*k,c*(k+1),k-1],"∫c dx = c·x; sonra üst sınır − alt sınır.",c+"·("+k+" − 1) = "+c*(k-1)+".")}
 ],
 "Elektrik ve manyetizma":[
  function(){var R=ri(2,20),I=ri(1,6);return mk(R+" Ω ’luk bir dirençten "+I+" A akım geçiyor. Direnç uçlarındaki gerilim kaç volttur?",R*I,[R+I,R/I,R*I*2],"Ohm Yasası: V = I·R.",I+" × "+R+" = "+R*I+" V.")},
- function(){var a=ri(2,9),b=ri(2,9),c=ri(2,9);return mk("Seri bağlı "+a+" Ω, "+b+" Ω ve "+c+" Ω dirençlerin eşdeğer direnci kaç Ω’dur?",a+b+c,[a*b*c,(a+b+c)/3,a+b],"Seri bağlamada dirençler toplanır.",a+" + "+b+" + "+c+" = "+(a+b+c)+" Ω.")},
- function(){var pr=pk([[6,3],[12,4],[10,10],[20,5],[6,6],[30,20],[12,12],[8,8]]),a=pr[0],b=pr[1];return mk("Paralel bağlı "+a+" Ω ve "+b+" Ω dirençlerin eşdeğer direnci kaç Ω’dur?",a*b/(a+b),[a+b,(a+b)/2,a*b],"Paralelde 1/R = 1/R₁ + 1/R₂; iki dirençte R = (R₁·R₂)/(R₁+R₂).",a+"·"+b+"/"+(a+b)+" = "+fm(a*b/(a+b))+" Ω.")},
- function(){var V=ri(2,24),I=ri(1,5);return mk(V+" V’luk gerilime bağlı bir alıcıdan "+I+" A akım geçiyor. Alıcının gücü kaç wattır?",V*I,[V+I,V/I,V*I*2],"Elektriksel güç: P = V·I.",V+" × "+I+" = "+V*I+" W.")},
- function(){var P=ri(1,10)*100,t=ri(2,10);return mk(P+" W’lık bir cihaz "+t+" saat çalışırsa kaç kWh enerji harcar?",P*t/1000,[P*t,P*t/100,P/t/10],"Enerji = güç × zaman; 1 kW = 1000 W.","("+P+" × "+t+")/1000 = "+fm(P*t/1000)+" kWh.")}
+ function(){var a=ri(2,9),b=ri(2,9),c=ri(2,9);return mk("Seri bağlı "+a+" Ω, "+b+" Ω ve "+c+" Ω dirençlerin eşdeğer direnci kaç Ω’dur?",a+b+c,[a*b*c,(a+b+c)/3,a+b],"Seri bağlamada dirençler toplanır.",a+" + "+b+" + "+c+" = "+(a+b+c)+" Ω.")}
 ],
 "Dalgalar":[
- function(){var l=ri(1,8),f=ri(2,50);return mk("Dalga boyu "+l+" m, frekansı "+f+" Hz olan bir dalganın yayılma hızı kaç m/s’dir?",l*f,[l+f,f/l,l/f],"Dalga denklemi: v = λ·f.",l+" × "+f+" = "+l*f+" m/s.")},
- function(){var T=pk([0.5,0.25,0.2,0.1,0.05]);return mk("Periyodu "+fm(T)+" s olan bir dalganın frekansı kaç Hz’dir?",1/T,[T,10*T,1/(2*T)],"Frekans periyodun tersidir: f = 1/T.","1/"+fm(T)+" = "+fm(1/T)+" Hz.")},
- function(){var f=ri(2,20),l=ri(2,10),v=f*l;return mk("Yayılma hızı "+v+" m/s, frekansı "+f+" Hz olan dalganın dalga boyu kaç m’dir?",l,[v*f,v+f,f],"λ = v / f.",v+" / "+f+" = "+l+" m.")},
- function(){var f=pk([2,4,5,10,20,25]);return mk("Frekansı "+f+" Hz olan bir dalganın periyodu kaç saniyedir?",1/f,[f,2*f,1/(2*f)],"Periyot frekansın tersidir: T = 1/f.","1/"+f+" = "+fm(1/f)+" s.")}
+ function(){var l=ri(1,8),f=ri(2,50);return mk("Dalga boyu "+l+" m, frekansı "+f+" Hz olan bir dalganın yayılma hızı kaç m/s’dir?",l*f,[l+f,f/l,l/f],"Dalga denklemi: v = λ·f.",l+" × "+f+" = "+l*f+" m/s.")}
 ]
 };
-function zayifKonu(){var e=D[D.length-1],rs=AD.map(function(a,i){return[a,nt(e[1][i])/TOP[i]]}).sort(function(x,y){return x[1]-y[1]}),kk=KN[T];
+function zayifKonu(){var hasD=D.length>0,e=hasD?D[D.length-1]:emptyEntry(),rs=AD.map(function(a,i){return[a,nt(e[1][i])/TOP[i]]}).sort(function(x,y){return x[1]-y[1]}),kk=KN[T];
  for(var i=0;i<rs.length;i++){var c=kk.filter(function(k){return k[1]===rs[i][0]}).sort(function(x,y){return x[2]-y[2]});if(c.length)return{k:c[0][0],d:c[0][1],p:c[0][2]}}
  var m=kk.slice().sort(function(x,y){return x[2]-y[2]})[0];return{k:m[0],d:m[1],p:m[2]}}
-function kz(e){if(!e||typeof GEN==="undefined"||!GEN)return;var z=zayifKonu();
+function kz(e,hasD){if(!e||typeof GEN==="undefined"||!GEN)return;var z=zayifKonu();
  if(KZ&&KZ.t!==T){KZ=null;document.body.classList.remove("ktx")}
  if(!KZ)KZ={mode:"cta",t:T,z:z};if(KZ.mode==="cta")KZ.z=z;kzR();
  var kn=$("kn");if(kn&&!kn.querySelector("[data-kz]"))kn.insertAdjacentHTML("beforeend",'<button class="btn alt" type="button" data-kz="go" style="margin-top:12px;width:100%">Zayıf noktayı kurut: '+esc(z.k)+'</button>')}
 function kzR(){var el=$("kt");if(!el||!KZ)return;var m=KZ.mode,z=KZ.z,rec=kzL()[T+"|"+z.k],im='<img class="tgi" alt="Togi" src="'+(typeof MS==="string"?MS:"")+'">',h="";
  document.body.classList.toggle("ktx",m!=="cta");
  if(m==="cta"){var ok=rec&&rec.best>=16;
-  h='<div class="ktc"><span class="kbd '+(ok?"gold":rec?"silver":"")+'">'+KBS+'</span><div><span class="mut">Zayıf nokta · '+esc(z.d)+'</span><b class="ktn">'+esc(z.k)+'</b><span class="mut">%'+z.p+' doğruluk · 20 soru'+(rec?" · en iyi "+rec.best+"/20":"")+'</span></div></div><button class="btn" type="button" data-a="go">Zayıf Noktayı Kurut: '+esc(z.k)+'</button>'+(ok?'<p class="mut" style="margin:10px 0 0;color:var(--ok);font-weight:600">Zayıf halka kurudu rozeti kazandın.</p>':'')}
+  h='<div class="ktc"><span class="kbd '+(ok?"gold":rec?"silver":"")+'">'+KBS+'</span><div><span class="mut">Önerilen konu · '+esc(z.d)+'</span><b class="ktn">'+esc(z.k)+'</b><span class="mut">20 soru pekiştirme testi'+(rec?" · en iyi "+rec.best+"/20":"")+'</span></div></div><button class="btn" type="button" data-a="go">Konuyu Pekiştir: '+esc(z.k)+'</button>'+(ok?'<p class="mut" style="margin:10px 0 0;color:var(--ok);font-weight:600">Zayıf halka kurudu rozeti kazandın.</p>':'')}
  else if(m==="load"){h='<div class="svt">'+im+'<div class="svb"><b>'+esc(z.k)+'</b> için sorularını hazırlıyorum<span class="kdots"></span></div></div>'}
- else if(m==="err"){h='<div class="svt">'+im+'<div class="svb">'+esc(KZ.err||"Sorular hazırlanamadı.")+(KZ.code?'<br><span class="mut" style="font-size:11px">Hata kodu: '+esc(KZ.code)+'</span>':'')+'</div></div><div class="sva"><button class="btn" type="button" data-a="go">Yeniden dene</button><button class="btn alt" type="button" data-a="back">Kartlara dön</button></div>'}
+ else if(m==="err"){h='<div class="svt">'+im+'<div class="svb">'+esc(KZ.err||"Bu konu için çevrimdışı soru havuzu henüz eklenmedi. Problemler, Fonksiyonlar, Türev, İntegral, Elektrik veya Dalgalar konularını çözebilirsin.")+'</div></div><div class="sva"><button class="btn alt" type="button" data-a="back">Kartlara dön</button></div>'}
  else if(m==="q"){var q=KZ.qs[KZ.i],tk="";for(var i=0;i<20;i++)tk+='<i class="'+(KZ.ans[i]===1?"ok":KZ.ans[i]===0?"no":i===KZ.i?"cur":"")+'"></i>';
   h='<div class="kh"><span class="chip" style="color:var(--pri)">'+esc(z.k)+'</span><span class="mut">Soru '+(KZ.i+1)+'/20</span><button type="button" class="lnk" data-a="back">Testi bırak</button></div><div class="kp">'+tk+'</div><p class="kq">'+esc(q.q)+'</p>'+
    q.s.map(function(s,j){var c=KZ.sel===null?"":j===q.d?" ok":j===KZ.sel?" no":"";return '<button type="button" class="ko'+c+'" data-a="opt" data-i="'+j+'"'+(KZ.sel!==null?" disabled":"")+'><span class="kl">'+"ABCD".charAt(j)+'</span>'+esc(s)+'</button>'}).join("")+
@@ -722,57 +740,46 @@ function kzR(){var el=$("kt");if(!el||!KZ)return;var m=KZ.mode,z=KZ.z,rec=kzL()[
    (wr.length?'<div class="kw"><b>Tekrar bakman gerekenler</b>'+wr.map(function(x){return '<div>'+esc(x.q)+'<br><span class="mut">Doğru: '+esc(x.s[x.d])+'</span></div>'}).join("")+'</div>':'')+
    '<div class="sva"><button class="btn" type="button" data-a="go">Yeni sorularla tekrar çöz</button><button class="btn alt" type="button" data-a="back">Kartlara dön</button></div>'}
  el.innerHTML=h}
-function kzShuf(x){var o=x.s.map(function(s,i){return[s,i===x.d]});for(var i=3;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=o[i];o[i]=o[j];o[j]=t}x.s=o.map(function(y){return y[0]});x.d=o.findIndex(function(y){return y[1]});return x}
-function kzOk(j){var a=j&&j.sorular;if(!Array.isArray(a))return null;var out=[];a.forEach(function(x){if(x&&typeof x.q==="string"&&x.q.trim()&&Array.isArray(x.s)&&x.s.length===4&&x.s.every(function(s){return typeof s==="string"&&s.trim()})&&new Set(x.s).size===4&&Number.isInteger(x.d)&&x.d>=0&&x.d<4)out.push(kzShuf({q:x.q,s:x.s,d:x.d,ip:String(x.ip||"").slice(0,200),ac:String(x.ac||"").slice(0,300)}))});return out.length>=20?out.slice(0,20):null}
-function kzMsg(c){return{not_granted:"Soruları hazırlayabilmem için izin vermen gerekiyor.",rate_limited:"Çok fazla deneme yapıldı, biraz sonra tekrar dene.",queue_overflow:"Çok fazla deneme yapıldı, biraz sonra tekrar dene.",sampling_disabled:"Hesabında bu özellik şu an kapalı."}[c]||"Sorular şu an hazırlanamadı. Tekrar dene."}
-async function kzAI(z){var YOK={m:"Bu konunun soruları yapay zekâ ile hazırlanıyor ve bu görünümde kapalı. Sayfayı claude.ai ya da Claude uygulamasında kendi hesabınla aç. Sayısal konularda (Problemler, Fonksiyonlar, Türev, İntegral, Elektrik, Dalgalar) test çevrimdışı çalışır."};
- if(typeof claude==="undefined"||!claude.use)throw{m:YOK.m,c:"claude_yok"};
- var sm=await claude.use("sample");if(!sm)throw{m:YOK.m,c:"sample_yok"};
- var pr="YKS "+T+" "+(P&&P.al?P.al+" alanı ":"")+"öğrencisi için "+z.d+" dersinin “"+z.k+"” konusundan tam 20 çoktan seçmeli soru yaz. Kurallar: Türkçe yaz; kolaydan zora sırala; her sorunun 4 şıkkı olsun ve yalnızca biri doğru olsun; sadece bu konudan, YKS düzeyinde, gerçek ve doğrulanabilir bilgiyle soru yaz; emin olmadığın, tartışmalı ya da belirsiz bilgi kullanma; şıklarda hepsi veya hiçbiri kullanma. Sadece şu JSON’u döndür: {\"sorular\":[{\"q\":\"soru metni\",\"s\":[\"şık1\",\"şık2\",\"şık3\",\"şık4\"],\"d\":doğru şıkkın indeksi (0-3),\"ip\":\"kısa ipucu\",\"ac\":\"1-2 cümlelik çözüm\"}]}";
- var j;try{j=await sm.json(pr,{cache:false})}catch(e){var c=e&&e.code;throw{m:kzMsg(c),c:c||(e&&e.message)}}
- var q=kzOk(j);if(!q)throw{m:"Sorular düzgün hazırlanamadı. Tekrar dene.",c:"gecersiz"};return q}
-function kzGen(g){var out=[],seen={},n=0;while(out.length<20&&n<600){var q=g[n%g.length]();n++;if(!seen[q.q]){seen[q.q]=1;out.push(q)}}return out}
-function kzStart(z0){if(window.goV)goV("kartlar");var z=z0||zayifKonu(),id=++kzSeq;KZ={mode:"load",t:T,z:z,qs:null,i:0,ans:[],sel:null,msg:""};kzR();
- var g=GEN[z.k];
- if(g){KZ.qs=kzGen(g);kzBegin()}
- else kzAI(z).then(function(q){if(id!==kzSeq)return;KZ.qs=q;kzBegin()}).catch(function(x){if(id!==kzSeq)return;KZ.mode="err";KZ.err=(x&&x.m)||"Sorular hazırlanamadı.";KZ.code=x&&(x.c||x.message);kzR()})}
-function kzBegin(){KZ.mode="q";KZ.i=0;KZ.ans=[];KZ.sel=null;KZ.msg="Haydi "+(P?P.ad:"")+", "+KZ.z.k+" konusunu kurutalım! 20 soru, nokta atışı. Hazırsan ilk soru geliyor."+(GEN[KZ.z.k]?"":" (Sorular yapay zekâ ile üretildi, bir hata görürsen öğretmenine sor.)");kzR()}
+function kzGen(g){var out=[],seen={},n=0;while(out.length<20&&n<600){var q=g[n%g.length]();n++;if(!seen[q.q]){seen[q.q]=1;out.push(q)}}while(out.length<20){out.push(g[out.length%g.length]())}return out}
+function kzStart(z0){if(window.goV)goV("kartlar");var z=z0||zayifKonu();KZ={mode:"load",t:T,z:z,qs:null,i:0,ans:[],sel:null,msg:""};kzR();
+ var g=GEN[z.k]||GEN["Problemler"];
+ KZ.qs=kzGen(g);kzBegin()}
+function kzBegin(){KZ.mode="q";KZ.i=0;KZ.ans=[];KZ.sel=null;KZ.msg="Haydi "+(P?P.ad:"")+", "+KZ.z.k+" konusunu kurutalım! 20 soru, nokta atışı. Hazırsan ilk soru geliyor.";kzR()}
 function kzAns(j){if(!KZ||KZ.mode!=="q"||KZ.sel!==null)return;var q=KZ.qs[KZ.i],ok=j===q.d;KZ.sel=j;KZ.ans[KZ.i]=ok?1:0;
- var st=0;for(var i=KZ.i;i>=0&&KZ.ans[i]===1;i--)st++;var pw=KZ.i>0&&KZ.ans[KZ.i-1]===0&&!ok;
  var s=ok?pk(["Tam isabet!","Harika, devam!","Doğru! Beynin ısındı.","Süper, böyle devam."]):pk(["Sorun değil, hata öğrenmenin parçası.","Takıldın ama şimdi öğrendin.","Yanlış da işe yarar: çözümü oku."]);
  if(!ok)s+=" Doğru cevap "+"ABCD".charAt(q.d)+") "+q.s[q.d]+".";
  if(q.ip)s+=" İpucu: "+q.ip;if(q.ac)s+=" "+q.ac;
- if(ok&&st===3)s+=" Üst üste 3 doğru!";if(ok&&st===5)s+=" 5 üst üste, ateş gibisin!";if(pw)s+=" Yavaşla, soruyu iki kez oku.";if(KZ.i===9)s+=" Yarı yoldasın!";
  KZ.msg=s;kzR()}
 function kzNext(){if(!KZ||KZ.mode!=="q"||KZ.sel===null)return;
  if(KZ.i<19){KZ.i++;KZ.sel=null;KZ.msg=KZ.i===10?"İkinci yarıya geçtik, tempoyu koru!":KZ.i===15?"Son 5 soru kaldı, bitiriyoruz!":"Sıradaki soru geliyor, sakin ol ve önce soruyu iyi oku.";kzR();return}
  var sc=KZ.ans.reduce(function(a,b){return a+b},0),R=kzL(),key=T+"|"+KZ.z.k,old=R[key];R[key]={best:Math.max(old?old.best:0,sc),last:sc,d:Date.now()};kzW(R);
- KZ.mode="res";KZ.msg=sc>=16?"Zayıf halka kurudu! "+KZ.z.k+" artık senin güçlü tarafın. Rozetini kazandın, şimdi bir sonraki zayıf noktaya geçebiliriz.":sc>=12?"Çok yaklaştın! Yanlışlarına tekrar bak, yeni sorularla bir tur daha çöz, rozet seni bekliyor.":"Bu konu seni hâlâ zorluyor, ama bu normal. Savaş kartlarında tekrar yap, çözümlerini oku ve yeni sorularla tekrar dene.";kzR()}
+ KZ.mode="res";KZ.msg=sc>=16?"Zayıf halka kurudu! "+KZ.z.k+" artık senin güçlü tarafın. Rozetini kazandın!":"Çok yaklaştın! Yanlışlarına tekrar bak, yeni sorularla bir tur daha çöz.";kzR()}
 $("kt").onclick=function(e){var b=e.target.closest("[data-a]");if(!b||!KZ)return;var a=b.dataset.a;
- if(a==="go")kzStart();else if(a==="opt")kzAns(+b.dataset.i);else if(a==="next")kzNext();else if(a==="back"){kzSeq++;KZ.mode="cta";KZ.qs=null;kzR()}};
+ if(a==="go")kzStart();else if(a==="opt")kzAns(+b.dataset.i);else if(a==="next")kzNext();else if(a==="back"){KZ.mode="cta";KZ.qs=null;kzR()}};
 $("kn").onclick=function(e){if(e.target.closest("[data-kz]"))kzStart()};
-try{kz(D[D.length-1])}catch(x){}
 
-/* YKS gün sayç */
+/* YKS gün sayacı */
 var YKS={TYT:{t:Date.UTC(2027,5,19,7,15),l:"19 Haziran 2027 Cumartesi, 10:15"},AYT:{t:Date.UTC(2027,5,20,7,15),l:"20 Haziran 2027 Pazar, 10:15"},YDT:{t:Date.UTC(2027,5,20,12,45),l:"20 Haziran 2027 Pazar, 15:45"}};
 var YKS_EK="Başvuru 4 Şubat – 2 Mart 2027 · Sonuç 21 Temmuz 2027";
 function cnX(){var k=T==="TYT"?"TYT":(P&&P.al==="Dil"?"YDT":"AYT");return{k:k,t:YKS[k].t,l:YKS[k].l}}
-function kalanMetin(){var x=cnX(),ms=x.t-Date.now();if(ms<=0)return "Sınav günü geldi ya da geçti. Sonuçlar için ÖSYM duyurularını takip et.";var d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5);return "YKS "+x.k+" oturumuna "+d+" gün "+h+" saat kaldı ("+x.l+"). Bu yaklaşık "+Math.floor(d/7)+" hafta; her hafta için küçük hedefler koy ve Haftalık program sayfasına ekle. Tarihler ÖSYM’nin 2027 takvimine göredir."}
+function kalanMetin(){var x=cnX(),ms=x.t-Date.now();if(ms<=0)return "Sınav günü geldi ya da geçti.";var d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5);return "YKS "+x.k+" oturumuna "+d+" gün "+h+" saat kaldı ("+x.l+")."}
 function cnR(){if(typeof YKS==="undefined"||!YKS)return;var el=$("cnt");if(!el)return;var x=cnX();
  el.innerHTML='<div class="cnh"><div><span class="mut">YKS · '+x.k+' oturumuna kalan</span><div class="cnb"><b id="cnd">0</b><span>gün</span></div></div><div class="cnt2"><div><b id="cnh">00</b><small>saat</small></div><div><b id="cnm">00</b><small>dk</small></div><div><b id="cns">00</b><small>sn</small></div></div></div><div class="cnp"><i id="cnpb" style="width:0"></i></div><p class="mut" id="cnl" style="margin:0"></p><p class="mut" style="margin:4px 0 0;font-size:11.5px">'+x.l+' · '+YKS_EK+'</p>';cnT()}
 function cnT(){if(typeof YKS==="undefined"||!YKS||!$("cnd"))return;var x=cnX(),ms=x.t-Date.now(),st=Date.UTC(2026,8,1),fr=Math.min(1,Math.max(0,(Date.now()-st)/(x.t-st)));if(ms<0)ms=0;
  var p=function(n){return("0"+n).slice(-2)};
  $("cnd").textContent=Math.floor(ms/864e5);$("cnh").textContent=p(Math.floor(ms%864e5/36e5));$("cnm").textContent=p(Math.floor(ms%36e5/6e4));$("cns").textContent=p(Math.floor(ms%6e4/1e3));
  $("cnpb").style.width=(fr*100)+"%";$("cnl").textContent=ms>0?"Eylül başından bu yana yolculuğun %"+Math.round(fr*100)+"’i tamamlandı.":"Sınav günü geldi. Başarılar!"}
-setInterval(cnT,1000);try{cnR()}catch(x){}
+setInterval(cnT,1000);
 
 /* ders ayrıntısı */
-function ddOpen(i){var e=D[D.length-1],v=e[1][i],a=AD[i],top=TOP[i],d=v[0],y=v[1],b=top-d-y,n=nt(v),r=n/top,pv=D[D.length-2],dn=pv?n-nt(pv[1][i]):0,hed=P?hh()[i]:null,
+function ddOpen(i){
+ if(!D.length){toast("Önce "+T+" denemesi ekle");return}
+ var e=D[D.length-1],v=e[1][i],a=AD[i],top=TOP[i],d=v[0],y=v[1],b=top-d-y,n=nt(v),r=n/top,pv=D.length>1?D[D.length-2]:null,dn=pv?n-nt(pv[1][i]):0,hed=P&&hh()?hh()[i]:null,
  kk=KN[T].filter(function(k){return k[1]===a}).sort(function(x,z){return x[2]-z[2]}),row=tH().filter(function(x){return x.a===a})[0],tp=TIP[a]||[],
  cl=function(x){return x<.6?"var(--bad)":x<.75?"var(--warn)":"var(--ok)"};
- var W=300,H=100,p=20,nets=D.map(function(x){return nt(x[1][i])}),sx=function(j){return p+j*(W-2*p)/Math.max(nets.length-1,1)},sy=function(q){return H-p-(q/top)*(H-2*p)},sv2='<line x1="'+p+'" x2="'+(W-p)+'" y1="'+(H-p)+'" y2="'+(H-p)+'" stroke="var(--line)"/>';
+ var W=300,H=100,p=20,nets=D.map(function(x){return nt(x[1][i])}),sx=function(j){return nets.length===1?(W/2):(p+j*(W-2*p)/(nets.length-1))},sy=function(q){return H-p-(q/top)*(H-2*p)},sv2='<line x1="'+p+'" x2="'+(W-p)+'" y1="'+(H-p)+'" y2="'+(H-p)+'" stroke="var(--line)"/>';
  if(hed!==null)sv2+='<line x1="'+p+'" x2="'+(W-p)+'" y1="'+sy(hed)+'" y2="'+sy(hed)+'" stroke="var(--ok)" stroke-dasharray="4 4"/><text x="'+p+'" y="'+(sy(hed)-4)+'" text-anchor="start" style="fill:var(--ok);font-size:9px">hedef '+hed+'</text>';
- sv2+='<polyline fill="none" stroke="var(--pri)" stroke-width="2.5" stroke-linejoin="round" points="'+nets.map(function(q,j){return sx(j)+","+sy(q)}).join(" ")+'"/>';
+ if(nets.length>1)sv2+='<polyline fill="none" stroke="var(--pri)" stroke-width="2.5" stroke-linejoin="round" points="'+nets.map(function(q,j){return sx(j)+","+sy(q)}).join(" ")+'"/>';
  nets.forEach(function(q,j){sv2+='<circle cx="'+sx(j)+'" cy="'+sy(q)+'" r="3.5" fill="var(--sf)" stroke="var(--pri)" stroke-width="2"/><text x="'+sx(j)+'" y="'+(sy(q)-8)+'" text-anchor="middle" style="fill:var(--ink);font-size:9px;font-weight:700">'+f(q)+'</text><text x="'+sx(j)+'" y="'+(H-4)+'" text-anchor="middle" style="fill:var(--mut);font-size:9px">'+D[j][0]+'</text>'});
  var h='<div class="kh"><div><span class="mut">'+e[0]+' · '+T+'</span><div style="font-size:20px;font-weight:700;letter-spacing:-.03em">'+esc(a)+'</div></div><button type="button" class="lnk" data-x="1">Kapat</button></div>'+
   '<div class="cnb" style="margin-top:8px"><b style="font-size:36px">'+f(n)+'</b><span>/ '+top+' net</span>'+(pv?'<span style="color:'+(dn>=0?"var(--ok)":"var(--bad)")+';font-weight:700">'+(dn>=0?"▲ +":"▼ ")+f(dn)+'</span>':'')+'</div>'+
@@ -780,10 +787,9 @@ function ddOpen(i){var e=D[D.length-1],v=e[1][i],a=AD[i],top=TOP[i],d=v[0],y=v[1
   '<div class="dstack"><i style="width:'+d/top*100+'%;background:var(--ok)"></i><i style="width:'+y/top*100+'%;background:var(--bad)"></i></div><p class="mut" style="margin:6px 0 0">'+d+' doğru · '+y+' yanlış · '+b+' boş</p>'+
   '<p class="dh2">Net kaybı analizi</p><p style="margin:0;font-size:13.5px">Yanlışların yüzünden <b>'+f(y/4)+' net</b> kaybettin (4 yanlış 1 doğruyu götürür). Boş bıraktığın '+b+' sorunun hepsini doğru yapsaydın <b>+'+b+' net</b> daha olurdu.'+(hed!==null?(hed-n>0?' Hedefine <b>'+f(hed-n)+' net</b> kaldı.':' Bu dersin hedefine ulaştın.'):'')+'</p>'+
   '<p class="dh2">Deneme gelişimi</p><svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;display:block" role="img" aria-label="'+esc(a)+' net grafiği">'+sv2+'</svg>'+
-  (kk.length?'<p class="dh2">Zayıf konular</p>'+kk.map(function(k){return '<div class="dk"><div style="display:flex;justify-content:space-between"><b>'+esc(k[0])+'</b><b style="color:'+cl(k[2]/100)+'">%'+k[2]+'</b></div><div class="bar"><i style="width:'+k[2]+'%;background:'+cl(k[2]/100)+'"></i></div></div>'}).join("")+'<p class="mut" style="margin:6px 0 0;font-size:11.5px">Konu yüzdeleri şimdilik örnek veridir.</p>':'')+
-  (row?'<p class="dh2">Önerilen çalışma</p><p style="margin:0;font-size:13.5px">Haftalık süre planana göre bu derse haftada yaklaşık <b>'+sa(row.h)+' saat</b> (günde ≈ '+Math.round(row.h/6*12)*5+' dk) ayırmalısın.</p>':'')+
+  (row?'<p class="dh2">Önerilen çalışma</p><p style="margin:0;font-size:13.5px">Haftalık süre planına göre bu derse haftada yaklaşık <b>'+sa(row.h)+' saat</b> (günde ≈ '+Math.round(row.h/6*12)*5+' dk) ayırmalısın.</p>':'')+
   (tp.length?'<p class="dh2">Togi’nin önerileri</p>'+tp.map(function(x){return '<p style="margin:0 0 4px;font-size:13.5px">• '+esc(x)+'</p>'}).join(""):'')+
-  (kk.length?'<button class="btn" type="button" style="margin-top:16px" data-kzd="'+i+'">Zayıf konuyu kurut: '+esc(kk[0][0])+'</button>':'');
+  (kk.length?'<button class="btn" type="button" style="margin-top:16px" data-kzd="'+i+'">Konu testi çöz: '+esc(kk[0][0])+'</button>':'');
  var m=$("dd");if(!m){m=document.createElement("div");m.id="dd";m.className="dd";m.setAttribute("role","dialog");m.setAttribute("aria-modal","true");document.body.appendChild(m);
   m.onclick=function(x){if(x.target===m||x.target.closest("[data-x]")){m.hidden=true;document.body.style.overflow="";return}
    var kb=x.target.closest("[data-kzd]");if(kb){var ii=+kb.dataset.kzd,ks=KN[T].filter(function(k){return k[1]===AD[ii]}).sort(function(u,w){return u[2]-w[2]});m.hidden=true;document.body.style.overflow="";if(ks.length)kzStart({k:ks[0][0],d:AD[ii],p:ks[0][2]})}};
@@ -792,57 +798,20 @@ function ddOpen(i){var e=D[D.length-1],v=e[1][i],a=AD[i],top=TOP[i],d=v[0],y=v[1
 $("dersler").onclick=function(e){var c=e.target.closest(".ders");if(c)ddOpen(+c.dataset.i)};
 $("dersler").onkeydown=function(e){if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("ders")){e.preventDefault();ddOpen(+e.target.dataset.i)}};
 
-/* ana ekrana ekle (TOGİ kısayolu) */
-var TOGI_ICON="data:image/png;base64,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",DPR=null;
-(function(){["apple-touch-icon","icon"].forEach(function(r){if(document.querySelector('link[rel="'+r+'"]'))return;var l=document.createElement("link");l.rel=r;if(r==="icon")l.type="image/png";l.href=TOGI_ICON;document.head.appendChild(l)});
- if(window.top===window&&!document.querySelector('link[rel="manifest"]')){try{var mf={name:"TOGİ Sınav Arkadaşı",short_name:"TOGİ",start_url:location.href,display:"standalone",background_color:"#f6f7fb",theme_color:"#5b3df5",lang:"tr",icons:[{src:TOGI_ICON,sizes:"180x180",type:"image/png"}]},l=document.createElement("link");l.rel="manifest";l.href=URL.createObjectURL(new Blob([JSON.stringify(mf)],{type:"application/manifest+json"}));document.head.appendChild(l)}catch(x){}}
- window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();DPR=e})})();
-function ksOpen(){var st=window.matchMedia&&matchMedia("(display-mode: standalone)").matches||navigator.standalone,m=$("ks");
- var h='<div class="kh"><b style="font-size:17px">Ana ekrana ekle</b><button type="button" class="lnk" data-x="1">Kapat</button></div><div style="display:flex;gap:14px;align-items:center;margin:14px 0"><img src="'+TOGI_ICON+'" alt="TOGİ simgesi" width="72" height="72" style="border-radius:18px;box-shadow:0 8px 22px -10px var(--g1)"><div><b>TOGİ</b><p class="mut" style="margin:2px 0 0">Ana ekranda Togi simgesi ve altında TOGİ yazısıyla görünür.</p></div></div>'+
-  (st?'<p style="margin:0 0 10px;color:var(--ok);font-weight:600">Uygulamayı zaten ana ekrandan açıyorsun.</p>':'')+
-  (DPR?'<button class="btn" type="button" data-i="1" style="margin-bottom:12px">Uygulamayı yükle</button>':'')+
-  '<p class="dh2">iPhone (Safari)</p><p style="margin:0;font-size:13.5px">1) Sayfayı Safari’de aç. 2) Alttaki <b>Paylaş</b> düğmesine bas. 3) <b>Ana Ekrana Ekle</b>’yi seçip <b>Ekle</b>’ye dokun.</p>'+
-  '<p class="dh2">Android (Chrome)</p><p style="margin:0;font-size:13.5px">1) Sayfayı Chrome’da aç. 2) Sağ üstteki <b>⋮</b> menüsüne bas. 3) <b>Ana ekrana ekle</b> (veya <b>Uygulamayı yükle</b>) seçeneğine dokun.</p>'+
-  '<p class="mut" style="margin:14px 0 0;font-size:11.5px">Claude uygulamasının içindeyken bu seçenekler görünmeyebilir; önce sayfayı telefonun tarayıcısında aç. Kısayol bu sayfanın adresini açar. Kendi sitende gerçek bir uygulama gibi yüklenmesi için hazır paket (togi-pwa) ayrıca verildi.</p>';
- if(!m){m=document.createElement("div");m.id="ks";m.className="dd";m.setAttribute("role","dialog");m.setAttribute("aria-modal","true");document.body.appendChild(m);
-  m.onclick=function(x){if(x.target===m||x.target.closest("[data-x]")){m.hidden=true;document.body.style.overflow="";return}
-   if(x.target.closest("[data-i]")&&DPR){DPR.prompt();DPR=null;m.hidden=true;document.body.style.overflow=""}};
-  document.addEventListener("keydown",function(x){if(x.key==="Escape"&&!m.hidden){m.hidden=true;document.body.style.overflow=""}})}
- m.innerHTML='<div class="dp">'+h+'</div>';m.hidden=false;document.body.style.overflow="hidden"}
-
-/* canlı kamera */
-var KC=null;
-function kcStop(){if(KC){KC.getTracks().forEach(function(t){t.stop()});KC=null}var v=$("kv");if(v)v.srcObject=null}
-async function kcStart(){
- try{KC=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:"environment"},width:{ideal:1920},height:{ideal:1080}},audio:false})}
- catch(e){var n=e&&e.name;toast(n==="NotAllowedError"||n==="SecurityError"?"Kamera izni verilmedi ya da bu görünümde kapalı. “Kamerayı aç” ile çekmeyi dene.":"Kamera açılamadı. “Kamerayı aç” ile çekmeyi dene.");return}
- adim(4);var v=$("kv");v.srcObject=KC;try{await v.play()}catch(e){}}
-function kcShot(){var v=$("kv");if(!v||!v.videoWidth){toast("Kamera henüz hazır değil");return}
- var c=document.createElement("canvas");c.width=v.videoWidth;c.height=v.videoHeight;c.getContext("2d").drawImage(v,0,0);
- c.toBlob(function(bl){if(!bl){toast("Görüntü alınamadı");return}kcStop();oku(bl)},"image/jpeg",.92)}
-if(!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia))$("kc").hidden=true;
-$("kc").onclick=kcStart;$("kcc").onclick=kcShot;$("kci").onclick=function(){kcStop();adim(1)};
-
-/* elle sonuç girişi */
-function elAc(){var h="";AD.forEach(function(a,i){h+='<div class="mr"><div><b>'+esc(a)+'</b><small class="mut">en fazla '+TOP[i]+' soru</small></div><input type="number" inputmode="numeric" min="0" max="'+TOP[i]+'" placeholder="Doğru" data-k="d" data-i="'+i+'" aria-label="'+esc(a)+' doğru"><input type="number" inputmode="numeric" min="0" max="'+TOP[i]+'" placeholder="Yanlış" data-k="y" data-i="'+i+'" aria-label="'+esc(a)+' yanlış"></div>'});$("elr").innerHTML=h;$("elm").textContent="";adim(5)}
-function elOk(){var v=AD.map(function(){return[0,0]}),any=false,bad="";
- document.querySelectorAll("#elr input").forEach(function(x){if(bad)return;var i=+x.dataset.i,n=x.value===""?0:Number(x.value);if(x.value!=="")any=true;if(!Number.isInteger(n)||n<0){bad=AD[i]+": sayı geçersiz";return}v[i][x.dataset.k==="d"?0:1]=n});
- if(!bad)v.forEach(function(r,i){if(!bad&&r[0]+r[1]>TOP[i])bad=AD[i]+": doğru + yanlış "+TOP[i]+" sorudan fazla olamaz"});
- if(!bad&&!any)bad="En az bir dersin doğru ve yanlış sayısını gir.";
- if(bad){$("elm").textContent=bad;return}cur=v;sonuc()}
-$("el").onclick=elAc;$("ere").onclick=elAc;$("elb").onclick=elOk;$("eli").onclick=function(){adim(1)};
-
 /* ana sayfa ayrıntılı analiz */
-function hr(e){var el=$("hst");if(!el)return;var d=0,y=0,tp=0;e[1].forEach(function(v,i){d+=v[0];y+=v[1];tp+=TOP[i]});var b=tp-d-y,n=tot(e);
- el.innerHTML='<div><small>Doğru</small><b>'+d+'</b></div><div><small>Yanlış</small><b>'+y+'</b></div><div><small>Boş</small><b>'+b+'</b></div><div><small>Başarı</small><b>%'+Math.round(n/tp*100)+'</b></div>'}
-function gdOpen(){var e=D[D.length-1],tp=TOP.reduce(ad2,0),nets=D.map(tot),n=nets[nets.length-1],pv=nets.length>1?nets[nets.length-2]:null,dn=pv===null?0:n-pv,d=0,y=0;e[1].forEach(function(v){d+=v[0];y+=v[1]});
+function hr(e,hasD){var el=$("hst");if(!el)return;var d=0,y=0,tp=0;e[1].forEach(function(v,i){d+=v[0];y+=v[1];tp+=TOP[i]});var b=tp-d-y,n=tot(e);
+ el.innerHTML='<div><small>Doğru</small><b>'+(hasD?d:0)+'</b></div><div><small>Yanlış</small><b>'+(hasD?y:0)+'</b></div><div><small>Boş</small><b>'+(hasD?b:tp)+'</b></div><div><small>Başarı</small><b>'+(hasD?('%'+Math.round(n/tp*100)):'%0')+'</b></div>'}
+function gdOpen(){
+ if(!D.length){toast("Önce "+T+" denemesi ekle");return}
+ var e=D[D.length-1],tp=TOP.reduce(ad2,0),nets=D.map(tot),n=nets[nets.length-1],pv=nets.length>1?nets[nets.length-2]:null,dn=pv===null?0:n-pv,d=0,y=0;e[1].forEach(function(v){d+=v[0];y+=v[1]});
  var b=tp-d-y,rem=HEDEF-n,bi=nets.indexOf(Math.max.apply(null,nets)),av=nets.reduce(ad2,0)/nets.length,l3=nets.slice(-3),av3=l3.reduce(ad2,0)/l3.length,gain=nets.length>1?(n-nets[0])/(nets.length-1):0,
-  trend=nets.length<3?"Trend için henüz yeterli deneme yok.":(n>av3+1?"Yükseliş trendindesin.":n<av3-1?"Son denemede biraz düşüş var.":"Netlerin dengeli seyrediyor."),
+  trend=nets.length<3?"Trend için daha fazla deneme ekle.":(n>av3+1?"Yükseliş trendindesin.":n<av3-1?"Son denemede biraz düşüş var.":"Netlerin dengeli seyrediyor."),
   x=cnX(),dl=Math.max(0,Math.floor((x.t-Date.now())/864e5)),wk=Math.max(1,Math.floor(dl/7)),need=rem>0?rem/wk:0,
-  proj=rem<=0?"Hedefine ulaştın.":(gain>0?"Bu hızla yaklaşık "+Math.ceil(rem/gain)+" denemede hedefe ulaşırsın.":"Şu anki hızla hedefe ulaşmak zor görünüyor, plana yeniden bakmak gerek."),
+  proj=rem<=0?"Hedefine ulaştın.":(gain>0?"Bu hızla yaklaşık "+Math.ceil(rem/gain)+" denemede hedefe ulaşırsın.":"Planlı çalışmayla hedefe adım adım yaklaşabilirsin."),
   cl=function(q){return q<.6?"var(--bad)":q<.75?"var(--warn)":"var(--ok)"};
- var W=300,H=110,p=22,lo=Math.max(0,Math.min.apply(null,nets.concat(HEDEF))-10),hi=Math.min(tp,Math.max.apply(null,nets.concat(HEDEF))+10),sx=function(j){return p+j*(W-2*p)/Math.max(nets.length-1,1)},sy=function(q){return H-p-((q-lo)/(hi-lo||1))*(H-2*p)},
-  sv2='<line x1="'+p+'" x2="'+(W-p)+'" y1="'+(H-p)+'" y2="'+(H-p)+'" stroke="var(--line)"/><line x1="'+p+'" x2="'+(W-p)+'" y1="'+sy(HEDEF)+'" y2="'+sy(HEDEF)+'" stroke="var(--ok)" stroke-dasharray="4 4"/><text x="'+p+'" y="'+(sy(HEDEF)-4)+'" style="fill:var(--ok);font-size:9px">hedef '+HEDEF+'</text><polyline fill="none" stroke="var(--pri)" stroke-width="2.5" stroke-linejoin="round" points="'+nets.map(function(q,j){return sx(j)+","+sy(q)}).join(" ")+'"/>';
+ var W=300,H=110,p=22,lo=Math.max(0,Math.min.apply(null,nets.concat(HEDEF))-10),hi=Math.min(tp,Math.max.apply(null,nets.concat(HEDEF))+10),sx=function(j){return nets.length===1?(W/2):(p+j*(W-2*p)/(nets.length-1))},sy=function(q){return H-p-((q-lo)/(hi-lo||1))*(H-2*p)},
+  sv2='<line x1="'+p+'" x2="'+(W-p)+'" y1="'+(H-p)+'" y2="'+(H-p)+'" stroke="var(--line)"/><line x1="'+p+'" x2="'+(W-p)+'" y1="'+sy(HEDEF)+'" y2="'+sy(HEDEF)+'" stroke="var(--ok)" stroke-dasharray="4 4"/><text x="'+p+'" y="'+(sy(HEDEF)-4)+'" style="fill:var(--ok);font-size:9px">hedef '+HEDEF+'</text>';
+ if(nets.length>1)sv2+='<polyline fill="none" stroke="var(--pri)" stroke-width="2.5" stroke-linejoin="round" points="'+nets.map(function(q,j){return sx(j)+","+sy(q)}).join(" ")+'"/>';
  nets.forEach(function(q,j){sv2+='<circle cx="'+sx(j)+'" cy="'+sy(q)+'" r="3.5" fill="var(--sf)" stroke="var(--pri)" stroke-width="2"/><text x="'+sx(j)+'" y="'+(sy(q)-8)+'" text-anchor="middle" style="fill:var(--ink);font-size:9px;font-weight:700">'+f(q)+'</text><text x="'+sx(j)+'" y="'+(H-5)+'" text-anchor="middle" style="fill:var(--mut);font-size:9px">'+D[j][0]+'</text>'});
  var rows=D.map(function(q,j){var nj=nets[j],pj=j?nets[j-1]:null;return '<div class="gr"><span><b>'+q[0]+'</b>'+(j===D.length-1?' <span class="chip" style="color:var(--pri)">son</span>':'')+'</span><span>'+f(nj)+' net</span><span style="color:'+(pj===null?"var(--mut)":nj-pj>=0?"var(--ok)":"var(--bad)")+'">'+(pj===null?"–":(nj-pj>=0?"+":"")+f(nj-pj))+'</span><span class="mut">%'+Math.round(nj/tp*100)+'</span></div>'}).reverse().join("");
  var ders=AD.map(function(a,i){var r=nt(e[1][i])/TOP[i];return '<div class="dk gdr" data-gi="'+i+'" role="button" tabindex="0"><div style="display:flex;justify-content:space-between"><b>'+esc(a)+'</b><span>'+f(nt(e[1][i]))+' / '+TOP[i]+' · <b style="color:'+cl(r)+'">%'+Math.round(r*100)+'</b> ›</span></div><div class="bar"><i style="width:'+r*100+'%;background:'+cl(r)+'"></i></div></div>'}).join("");
@@ -873,20 +842,21 @@ var BANK={
 "Biyoloji":[["Hardy–Weinberg denklemi nedir?","p² + 2pq + q² = 1 (p + q = 1)","p ve q alel sıklıkları, 2pq heterozigot.","Popülasyon genetiği sorularını iki denklemle çözersin."],["Fotosentezin genel denklemi nedir?","6CO₂ + 6H₂O + ışık → C₆H₁₂O₆ + 6O₂","Girenler CO₂ ve su, çıkanlar glikoz ve oksijen.","Fotosentez-solunum karşılaştırma sorularının omurgası."]],
 "Türkçe":[["Paragrafta ana düşünce nedir?","Yazarın okura vermek istediği temel mesaj ya da yargı.","Son cümleye ve “bu nedenle”, “sonuç olarak” gibi ifadelere bak.","Paragraf, sınavdaki en büyük soru grubu; ana düşünceyi bulmak çoğu soruyu çözer."],["“de/da” ne zaman ayrı yazılır?","Bağlaç olan de/da ayrı, ek olan -de/-da bitişik yazılır.","“De”yi çıkar: cümle bozulmuyorsa bağlaçtır.","Yazım kuralları her denemede birkaç soru getirir."]],
 "Sosyal":[["Kuva-yı Milliye nedir?","Kurtuluş Savaşı’nda halkın kendi imkanlarıyla kurduğu düzensiz direniş güçleri.","Kuva = güç, milli = halkın gücü.","Düzenli ordu ile karıştırılır; İnkılap Tarihi sorularının sık tuzağı."],["Enlem ve boylam arasındaki fark nedir?","Enlem ekvatora paralel, boylam kutuplardan geçen yarım dairelerdir.","Enlem iklimi, boylam yerel saati belirler.","Konum ve saat hesabı sorularının temeli."]],
-"Edebiyat":[["Divan edebiyatında nızm birimi nedir?","Beyit (iki dize).","Gazel, beyitlerle kurulur.","Nazım şekli ile birimi karıştırılır; biçim sorularında ilk bilgi."],["Servet-i Fünun’un sanat anlayışı nedir?","Sanat sanat içindir.","Ağır dil ve bireysel konular.","Dönem soruları eşleştirmeyle gelir."]],
+"Edebiyat":[["Divan edebiyatında nazım birimi nedir?","Beyit (iki dize).","Gazel, beyitlerle kurulur.","Nazım şekli ile birimi karıştırılır; biçim sorularında ilk bilgi."],["Servet-i Fünun’un sanat anlayışı nedir?","Sanat sanat içindir.","Ağır dil ve bireysel konular.","Dönem soruları eşleştirmeyle gelir."]],
 "Tarih":[["Lozan Antlaşması ne zaman imzalandı?","24 Temmuz 1923.","Cumhuriyetten önce, 1923 yazı.","Bağımsızlığın uluslararası tescilidir; kronoloji sorularında çıpa tarihtir."],["Kanuni döneminde Macaristan’da kazanılan savaş hangisidir?","Mohaç Meydan Muharebesi (1526).","Macaristan seferi, 1526.","Osmanlı yükselme dönemi sorularında sık sık sınanır."]],
 "Coğrafya":[["Dünya’nın eksen eğikliği neye yol açar?","Mevsimlerin oluşmasına.","Eğik eksen: Güneş ışınları yıl boyunca farklı açıyla gelir.","Mevsim ve gündüz süresi sorularının anahtarı."],["Türkiye’de en çok yağış alan bölge hangisidir?","Karadeniz Bölgesi (Doğu Karadeniz).","Dağlar denize paralel uzanır, nemi tutar.","Yağış ve bitki örtüsü sorularının sık kullanılan bilgisi."]],
 "Felsefe ve Din":[["Epistemoloji ne demektir?","Bilgi felsefesi: bilginin kaynağı, sınırları ve doğruluğu.","Epistem = bilgi.","Felsefe soruları kavram eşleştirmeye dayanır."],["Zekât hangi ibadet türüne girer?","Mali ibadet.","Mal ile yapılan ibadet.","Bedeni ve mali ibadetler sık karıştırılır."]],
-"Yabancı Dil":[["“Although” hangi anlamı verir?","Karşıtlık: “-e rağmen”.","Zıtlık bağlacı; ardından tam cümle gelir.","Bağlac soruları her YDT’de karşına çıkar."],["“If I had studied, I would have passed.” hangi koşul tipi?","Type 3: geçmişte gerçekleşmeyen durum.","had + V3, would have + V3.","Koşul cümleleri sık sık sorulur."],["“Despite” sonrasında ne gelir?","İsim ya da -ing (tam cümle gelmez).","Despite the rain / despite studying.","Bağlac-edat ayırımı sorularında yanlışı önler."],["Passive voice (edilgen) yapısı nedir?","be + V3 (is done, was made).","Özne işi yapmaz, işten etkilenir.","Çatı ve çeviri sorularının temeli."]]
+"Yabancı Dil":[["“Although” hangi anlamı verir?","Karşıtlık: “-e rağmen”.","Zıtlık bağlacı; ardından tam cümle gelir.","Bağlaç soruları her YDT’de karşına çıkar."],["“If I had studied, I would have passed.” hangi koşul tipi?","Type 3: geçmişte gerçekleşmeyen durum.","had + V3, would have + V3.","Koşul cümleleri sık sık sorulur."]]
 };
 var KS=null,SS=null,DK=[],CR=[],ZR=[],KRITIK=.5;
 function wkKey(){var d=new Date();d=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));d.setUTCDate(d.getUTCDate()+4-(d.getUTCDay()||7));var y=d.getUTCFullYear();return y+"-H"+Math.ceil(((d-Date.UTC(y,0,1))/864e5+1)/7)}
 function hsh(s){var h=7;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return h}
 function ksL(){if(KS)return KS;try{KS=JSON.parse(localStorage.getItem("yks_kart"))}catch(x){}var w=wkKey();if(!KS||KS.w!==w)KS={w:w,k:{TYT:{},AYT:{}},l:{}};if(!KS.k)KS.k={TYT:{},AYT:{}};if(!KS.l)KS.l={};return KS}
 function ksW(){try{localStorage.setItem("yks_kart",JSON.stringify(KS))}catch(x){}}
-function kr(e){if(!BANK||!e)return;var K=ksL(),ls=K.l[T];CR=AD.filter(function(a,i){return nt(e[1][i])/TOP[i]<KRITIK});
- if(!ls||ls.some(function(x){return AD.indexOf(x)<0})){ls=AD.map(function(a,i){return[a,nt(e[1][i])/TOP[i]]}).sort(function(x,y){return x[1]-y[1]}).slice(0,3).map(function(x){return x[0]});K.l[T]=ls;ksW()}
- var ch=0;CR.forEach(function(a){if(ls.indexOf(a)<0){ls.unshift(a);ch=1}});if(ch){K.l[T]=ls;ksW()}
+function kr(e,hasD){if(!BANK||!e)return;var K=ksL(),ls=K.l[T];
+ CR=hasD?AD.filter(function(a,i){return nt(e[1][i])/TOP[i]<KRITIK}):[];
+ if(!ls||ls.some(function(x){return AD.indexOf(x)<0})){ls=AD.slice(0,3);K.l[T]=ls;ksW()}
+ if(hasD){var ch=0;CR.forEach(function(a){if(ls.indexOf(a)<0){ls.unshift(a);ch=1}});if(ch){K.l[T]=ls;ksW()}}
  var dk=[];ls.forEach(function(a){(BANK[a]||[]).forEach(function(c,i){dk.push({id:a+"#"+i,d:a,c:c})})});
  var r=rnd(hsh(K.w+T));for(var i=dk.length-1;i>0;i--){var j=Math.floor(r()*(i+1)),t=dk[i];dk[i]=dk[j];dk[j]=t}
  dk.sort(function(a,b){return (CR.indexOf(b.d)>-1)-(CR.indexOf(a.d)>-1)});DK=dk;var kn=K.k[T]||(K.k[T]={});
@@ -894,13 +864,13 @@ function kr(e){if(!BANK||!e)return;var K=ksL(),ls=K.l[T];CR=AD.filter(function(a
  SS.ls=ls;sv()}
 function bub(){var c=DK.filter(function(x){return x.id===SS.q[0]})[0];if(!c)return"";
  if(SS.mode==="h")return "<b>İpucu:</b> "+c.c[2]+"<br><b>Ne işe yarar:</b> "+c.c[3];
- return SS.msg||(SS.fl?"Cevabı gördün! Şimdi dürüstçe işaretle: biliyor muydun?":"Bu hafta en çok "+SS.ls.join(", ")+(SS.ls.length>1?" derslerinde":" dersinde")+" zorlandın. Cevabı içinden söyle, sonra karta dokunup kontrol et!")}
+ return SS.msg||(SS.fl?"Cevabı gördün! Şimdi dürüstçe işaretle: biliyor muydun?":"Cevabı içinden söyle, sonra karta dokunup kontrol et!")}
 function acts(){return SS.mode==="h"?'<button class="btn" type="button" data-a="next">Anladım, devam et</button>':'<button class="btn" type="button" data-a="know">Biliyorum</button><button class="btn alt" type="button" data-a="unk">Bilemedim</button>'}
 function upd(){var el=$("sv");SS.msg=SS.mode==="q"&&!SS.fl&&SS.msg&&SS.msg.indexOf("Cevabı gördün")===0?"":SS.msg;el.querySelector(".svb").innerHTML=bub();el.querySelector(".sva").innerHTML=acts()}
 function sv(){zrUp();var el=$("sv");if(!el)return;var kn=KS.k[T],n=DK.length,kc=DK.filter(function(x){return kn[x.id]}).length,
  im='<img class="tgi" alt="Togi" src="'+(typeof MS==="string"?MS:"")+'">',
- h='<div class="svh"><div><b>Togi’nin Savaş Kartları</b><span class="mut">Günlük tekrar ve formül görevi · her hafta yenilenir</span></div><span class="chip" style="color:var(--pri)">'+kc+'/'+n+'</span></div>'+(ZR.length?'<p class="mut" style="color:var(--bad);font-weight:700;margin:8px 0 0">Zorunlu: '+ZR.join(", ")+' kartlarını bitir</p>':'')+'<div class="bar" style="margin:10px 0 12px"><i style="width:'+(n?kc/n*100:0)+'%;background:var(--pri)"></i></div>';
- if(SS.mode==="d"){h+='<div class="svt">'+im+'<div class="svb">'+(n?'Bu haftanın görevi tamam: '+n+' kartın hepsini bildin! Yeni kartlar haftaya, deneme sonuçlarındaki eksiklerine göre gelecek.':'Bu hafta için kart yok, deneme ekleyince hazırlarım.')+'</div></div><div class="sva"><button class="btn alt" type="button" data-a="reset">Kartları yeniden çöz</button></div>'}
+ h='<div class="svh"><div><b>Togi’nin Savaş Kartları</b><span class="mut">Günlük tekrar ve formül görevi</span></div><span class="chip" style="color:var(--pri)">'+kc+'/'+n+'</span></div>'+(ZR.length?'<p class="mut" style="color:var(--bad);font-weight:700;margin:8px 0 0">Zorunlu: '+ZR.join(", ")+' kartlarını bitir</p>':'')+'<div class="bar" style="margin:10px 0 12px"><i style="width:'+(n?kc/n*100:0)+'%;background:var(--pri)"></i></div>';
+ if(SS.mode==="d"){h+='<div class="svt">'+im+'<div class="svb">Bu haftanın görevi tamam: '+n+' kartın hepsini bildin!</div></div><div class="sva"><button class="btn alt" type="button" data-a="reset">Kartları yeniden çöz</button></div>'}
  else{var c=DK.filter(function(x){return x.id===SS.q[0]})[0],ty=(SAY.indexOf(c.d)>-1?"Formül kartı":"Kavram kartı")+(CR.indexOf(c.d)>-1?" · Zorunlu":"");
   h+='<div class="fc'+(SS.fl?' fl':'')+'" data-a="fl" role="button" tabindex="0" aria-label="Kartı çevir"><div class="fi"><div class="ff"><span class="chip" style="color:var(--pri)">'+ty+' · '+c.d+'</span><p class="fq">'+c.c[0]+'</p><span class="mut">Cevabı görmek için karta dokun</span></div><div class="ff bk"><span class="chip" style="color:var(--pri)">Cevap</span><p class="fq">'+c.c[1]+'</p><span class="mut">Tekrar dokun: soruya dön</span></div></div></div><div class="svt">'+im+'<div class="svb">'+bub()+'</div></div><div class="sva">'+acts()+'</div>'}
  el.innerHTML=h}
@@ -908,18 +878,17 @@ $("sv").onclick=function(e){var b=e.target.closest("[data-a]");if(!b||!SS)return
  if(a==="fl"&&SS.mode!=="h"){SS.fl=!SS.fl;b.classList.toggle("fl",SS.fl);SS.msg="";upd()}
  else if(a==="know"){kn[SS.q[0]]=1;ksW();SS.q.shift();SS.fl=false;SS.msg=["Harika!","Tam isabet!","Böyle devam!","Süper, bir kart daha bitti!"][Math.floor(Math.random()*4)];if(!SS.q.length)SS.mode="d";sv()}
  else if(a==="unk"){SS.mode="h";SS.fl=true;el.querySelector(".fc").classList.add("fl");upd()}
- else if(a==="next"){SS.q.push(SS.q.shift());SS.mode="q";SS.fl=false;SS.msg="Bu kartı sona koydum, tekrar karşına çıkacak. Sıradaki kartı deneyelim!";sv()}
- else if(a==="reset"){K.k[T]={};ksW();SS=null;kr(D[D.length-1])}};
+ else if(a==="next"){SS.q.push(SS.q.shift());SS.mode="q";SS.fl=false;SS.msg="Bu kartı sona koydum, tekrar karşına çıkacak.";sv()}
+ else if(a==="reset"){K.k[T]={};ksW();SS=null;kr(D.length?D[D.length-1]:emptyEntry(),D.length>0)}};
 $("sv").onkeydown=function(e){if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("fc")){e.preventDefault();e.target.click()}};
-try{kr(D[D.length-1])}catch(x){}
 
-function zrUp(){var kn=(KS&&KS.k&&KS.k[T])||{};ZR=CR.filter(function(a){return DK.some(function(c){return c.d===a&&!kn[c.id]})});
+function zrUp(){if(!D.length){ZR=[];if($("zb"))$("zb").hidden=true;return}var kn=(KS&&KS.k&&KS.k[T])||{};ZR=CR.filter(function(a){return DK.some(function(c){return c.d===a&&!kn[c.id]})});
  var zb=$("zb"),mi=document.querySelector('.mi[data-v="kartlar"]');if(mi)mi.classList.toggle("zr",ZR.length>0);
  if(zb){zb.hidden=!ZR.length;if(ZR.length)zb.innerHTML='<span class="chip" style="color:var(--bad)">Zorunlu görev</span><p><b>'+ZR.join(", ")+'</b> '+(ZR.length>1?"dersleri":"dersi")+' çok düşük ('+zpc()+'). Togi’nin Savaş Kartları’nı bitirmeden yeni deneme ekleyemezsin.</p><button class="btn" type="button" data-go="kartlar">Kartlara git</button>'}}
-function zpc(){var e=D[D.length-1];return ZR.map(function(a){var i=AD.indexOf(a);return "%"+Math.round(nt(e[1][i])/TOP[i]*100)}).join(", ")}
+function zpc(){if(!D.length)return"";var e=D[D.length-1];return ZR.map(function(a){var i=AD.indexOf(a);return "%"+Math.round(nt(e[1][i])/TOP[i]*100)}).join(", ")}
 function zgo(){var m=$("zg");if(!m){m=document.createElement("div");m.id="zg";m.className="zg";m.setAttribute("role","alertdialog");m.setAttribute("aria-modal","true");document.body.appendChild(m);
   m.onclick=function(x){if(x.target.closest("[data-go]")){m.hidden=true;document.body.style.overflow="";goV("kartlar")}}}
- m.innerHTML='<div class="zp"><img class="tgi" alt="Togi" src="'+(typeof MS==="string"?MS:"")+'"><b>Dikkat, çok düşük ders var!</b><p><b style="display:inline">'+ZR.join(", ")+'</b> '+(ZR.length>1?"derslerinde":"dersinde")+' başarın çok düşük ('+zpc()+'). '+(ZR.length>1?"Bu dersler için":"Bu ders için")+' Togi’nin Savaş Kartları zorunlu: kartları bitirmeden yeni deneme ekleyemezsin.</p><button class="btn" type="button" data-go="kartlar">Savaş kartlarına başla</button></div>';
+ m.innerHTML='<div class="zp"><img class="tgi" alt="Togi" src="'+(typeof MS==="string"?MS:"")+'"><b>Dikkat, çok düşük ders var!</b><p><b style="display:inline">'+ZR.join(", ")+'</b> '+(ZR.length>1?"derslerinde":"dersinde")+' başarın çok düşük ('+zpc()+'). Savaş kartlarını bitirmeden yeni deneme ekleyemezsin.</p><button class="btn" type="button" data-go="kartlar">Savaş kartlarına başla</button></div>';
  m.hidden=false;document.body.style.overflow="hidden"}
 $("zb").onclick=function(e){if(e.target.closest("[data-go]"))goV("kartlar")};
 
@@ -927,20 +896,17 @@ $("zb").onclick=function(e){if(e.target.closest("[data-go]"))goV("kartlar")};
 var PR=null,GUN=["Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"];
 function pL(){if(PR)return PR;try{PR=JSON.parse(localStorage.getItem("yks_prog"))}catch(x){}if(!PR||!PR.items)PR={wk:30,items:[]};if(!PR.dn)PR.dn=[];var dd=PR.items.filter(function(x){return x.x});if(dd.length){dd.forEach(function(x){PR.dn.push({s:x.s,d:x.d,h:x.h})});PR.items=PR.items.filter(function(x){return !x.x})}return PR}
 function pW(){try{localStorage.setItem("yks_prog",JSON.stringify(PR))}catch(x){}}
-function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-function sa(n){return (Math.round(n*2)/2).toString().replace(".",",")}
-function ad2(s,x){return s+x}
 function pl(e){if(!GUN)return;var R=pL(),tp=TOP.reduce(ad2,0),
- gap=AD.map(function(a,i){return Math.max((P?hh()[i]:TOP[i]*.8)-nt(e[1][i]),0)}),sg=gap.reduce(ad2,0),
+ gap=AD.map(function(a,i){return Math.max((P&&hh()?hh()[i]:TOP[i]*.8)-nt(e[1][i]),0)}),sg=gap.reduce(ad2,0),
  mine=R.items.filter(function(x){return x.s===T});
  var rows=AD.map(function(a,i){var h=R.wk*(.4*TOP[i]/tp+.6*(sg?gap[i]/sg:TOP[i]/tp));
   return{a:a,r:nt(e[1][i])/TOP[i],g:gap[i],h:h,p:mine.filter(function(x){return x.d===a}).reduce(function(s,x){return s+x.h},0)+R.dn.filter(function(x){return x.s===T&&x.d===a}).reduce(function(s,x){return s+x.h},0)}});
  rows.sort(function(x,y){return y.g-x.g||y.h-x.h});
- var mx=Math.max.apply(null,rows.map(function(x){return x.h}));
+ var mx=Math.max.apply(null,rows.map(function(x){return x.h}))||1;
  $("wk").textContent=R.wk;
  $("pn").innerHTML='<p>En çok zaman ayırman gereken ders <b>'+rows[0].a+'</b>: hedefinin '+f(rows[0].g)+' net altındasın.</p>'+rows.map(function(x){
   var c=x.r<.6?"var(--bad)":x.r<.75?"var(--warn)":"var(--ok)",lb=x.r<.6?"Öncelikli":x.r<.75?"Geliştir":"İyi",ek=x.h-x.p;
-  return '<div class="pr"><div class="r"><b>'+x.a+'</b><span class="chip" style="color:'+c+'">'+lb+'</span></div><div class="bar" style="margin:8px 0 6px"><i style="width:'+x.h/mx*100+'%;background:'+c+'"></i></div><div class="r mut"><span>Haftada <b style="color:var(--ink)">'+sa(x.h)+' sa</b> · günde ≈ '+Math.round(x.h/6*12)*5+' dk</span><span>'+(ek>0.4?'Programında '+sa(x.p)+' sa · '+sa(ek)+' sa eksik':'Programın yeterli ✓')+'</span></div></div>'}).join("")+'<p class="mut" style="margin-top:8px">Süreler tahminidir: eksik net, ders ağırlığı ve haftalık toplam sürene göre hesaplanır, haftada 6 çalışma günü varsayılır.</p>';
+  return '<div class="pr"><div class="r"><b>'+x.a+'</b><span class="chip" style="color:'+c+'">'+lb+'</span></div><div class="bar" style="margin:8px 0 6px"><i style="width:'+x.h/mx*100+'%;background:'+c+'"></i></div><div class="r mut"><span>Haftada <b style="color:var(--ink)">'+sa(x.h)+' sa</b> · günde ≈ '+Math.round(x.h/6*12)*5+' dk</span><span>'+(ek>0.4?'Programında '+sa(x.p)+' sa · '+sa(ek)+' sa eksik':'Programın yeterli ✓')+'</span></div></div>'}).join("");
  var pv=$("pd").value;$("pd").innerHTML=AD.map(function(a){return'<option>'+a+'</option>'}).join("");if(AD.indexOf(pv)>-1)$("pd").value=pv;
  var h="",dd=R.dn.filter(function(x){return x.s===T}).reduce(function(s,x){return s+x.h},0),tl=mine.reduce(function(s,x){return s+x.h},0)+dd,dn=mine.filter(function(x){return x.x}).reduce(function(s,x){return s+x.h},0)+dd;
  GUN.forEach(function(g){var it=mine.filter(function(x){return x.g===g});if(!it.length)return;
@@ -960,12 +926,12 @@ $("pls").onchange=function(e){var id=e.target.dataset.x;if(!id)return;var R=pL()
 
 /* menü ve sayfalar */
 var VW={kartlar:["Togi’nin Savaş Kartları","Günlük tekrar ve formül görevi"],ozet:["Genel bakış"],analiz:["Togi Ders Kartları","Zayıf yönlerin ve koçunun önerileri"],sure:["Çalışma süreleri","Her ders için haftalık süre önerisi"],program:["Haftalık programım","Kendi çalışma görevlerini planla"]};
-var IC={kisayol:'<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M12 8v6M9 11h6"/>',kartlar:'<rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/>',ozet:'<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>',analiz:'<line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>',sure:'<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',program:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',hedef:'<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',yeni:'<path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 10 9 10"/>',alan:'<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>'};
+var IC={kartlar:'<rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/>',ozet:'<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>',analiz:'<line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>',sure:'<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',program:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',hedef:'<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',yeni:'<path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 10 9 10"/>',alan:'<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>'};
 (function(){var ic=$("ic"),cur="ozet";
  function sc(id){return $(id).closest("section")}
  [[$("gun"),"ozet"],[ic.querySelector(".hd"),"ozet"],[$("cnt"),"ozet"],[$("zw"),"ozet"],[$("ekle"),"ozet"],[$("kt"),"kartlar"],[$("sv"),"kartlar"],[sc("ad"),"ozet"],[sc("dersler"),"ozet"],[sc("tr"),"ozet"],[sc("dn"),"analiz"],[sc("kn"),"analiz"],[sc("coach"),"analiz"],[sc("pn"),"sure"],[sc("pls"),"program"]].forEach(function(m){m[0].dataset.v=m[1]});
  var vt=document.createElement("div");vt.className="vt";vt.innerHTML="<h1></h1><p class='mut'></p>";ic.insertBefore(vt,ic.querySelector(".hd").nextSibling);
- var G=[["Takip",[["ozet","Ana sayfa"],["kartlar","Togi’nin Savaş Kartları"],["analiz","Togi Ders Kartları"]]],["Planlama",[["sure","Çalışma süreleri"],["program","Haftalık program"]]],["Ayarlar",[["hedef","Hedeflerimi düzenle"],["alan","Alanımı değiştir"],["yeni","Baştan kayıt ol"]]]];
+ var G=[["Takip",[["ozet","Ana sayfa"],["kartlar","Togi’nin Savaş Kartları"],["analiz","Togi Ders Kartları"]]],["Planlama",[["sure","Çalışma süreleri"],["program","Haftalık program"]]],["Ayarlar",[["hedef","Hedeflerimi düzenle"],["alan","Alanımı değiştir"],["yeni","Tüm verileri sıfırla"]]]];
  var nav=document.createElement("nav");nav.className="mn";nav.setAttribute("inert","");nav.setAttribute("aria-label","Menü");
  nav.innerHTML='<div class="pf2"><span class="av" id="mav">•</span><div><b id="mnm">Öğrenci</b><p class="mut" id="mhd"></p></div></div>'+G.map(function(g){return '<h3>'+g[0]+'</h3>'+g[1].map(function(i){return '<button type="button" class="mi" data-v="'+i[0]+'"><svg viewBox="0 0 24 24" aria-hidden="true">'+IC[i[0]]+'</svg>'+i[1]+'</button>'}).join("")}).join("");
  var mb=document.createElement("div");mb.className="mb";
@@ -982,7 +948,7 @@ var IC={kisayol:'<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M12 8
   nav.classList.add("on");nav.removeAttribute("inert");mb.classList.add("on");bt.setAttribute("aria-expanded","true");document.body.style.overflow="hidden";nav.querySelector(".mi").focus()}
  function kp(){nav.classList.remove("on");nav.setAttribute("inert","");mb.classList.remove("on");bt.setAttribute("aria-expanded","false");document.body.style.overflow=""}
  bt.onclick=ac;mb.onclick=kp;window.goV=view;
- nav.onclick=function(e){var b=e.target.closest(".mi");if(!b)return;kp();if(b.dataset.v==="hedef")obAc();else if(b.dataset.v==="alan")obAc(3);else if(b.dataset.v==="kisayol")ksOpen();else if(b.dataset.v==="yeni")yeniKayit();else view(b.dataset.v)};
+ nav.onclick=function(e){var b=e.target.closest(".mi");if(!b)return;kp();if(b.dataset.v==="hedef")obAc();else if(b.dataset.v==="alan")obAc(3);else if(b.dataset.v==="yeni")yeniKayit();else view(b.dataset.v)};
  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&nav.classList.contains("on")){kp();bt.focus()}});
  ap("ozet")})();
 
@@ -991,17 +957,23 @@ function hh(){return P?(T==="TYT"?P.h:P.a):null}
 function sec(k){if(k===T)return;var ic=$("ic"),tb=$("tabs");tb.dataset.t=k;
  tb.querySelectorAll("button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.t===k)});
  ic.classList.add("sw");
- setTimeout(function(){T=k;AD=S[k].ad;TOP=S[k].top;D=S[k].d;HEDEF=P?hh().reduce(function(s,x){return s+x},0):(k==="TYT"?95:66);render();window.scrollTo(0,0);ic.classList.remove("sw")},200)}
+ setTimeout(function(){T=k;AD=S[k].ad;TOP=S[k].top;D=S[k].d;HEDEF=P&&hh()?hh().reduce(function(s,x){return s+x},0):(k==="TYT"?95:66);render();window.scrollTo(0,0);ic.classList.remove("sw")},200)}
 document.querySelectorAll("#tabs button").forEach(function(b){b.onclick=function(){sec(b.dataset.t)}});
-function ek(e){var dd=0,yy=0,tt=0;e[1].forEach(function(v,i){dd+=v[0];yy+=v[1];tt+=TOP[i]});
+function ek(e,hasD){var dd=0,yy=0,tt=0;e[1].forEach(function(v,i){dd+=v[0];yy+=v[1];tt+=TOP[i]});
  var bb=tt-dd-yy,C=2*Math.PI*44,o=0,s="",l="";
- [[dd,"var(--ok)","Doğru"],[yy,"var(--bad)","Yanlış"],[bb,"var(--line)","Boş"]].forEach(function(a){var n=a[0]/tt*C;
-  s+='<circle cx="60" cy="60" r="44" fill="none" stroke="'+a[1]+'" stroke-width="16" stroke-dasharray="'+n+" "+(C-n)+'" stroke-dashoffset="'+(-o)+'" transform="rotate(-90 60 60)"/>';o+=n;
-  l+='<span style="--c:'+a[1]+'"><b>'+a[0]+'</b> '+a[2]+'</span>'});
- $("dn").innerHTML=s+'<text x="60" y="65" text-anchor="middle" style="font-size:16px;font-weight:800;fill:var(--ink)">%'+Math.round(dd/tt*100)+'</text>';$("dg").innerHTML=l;
- var kk=KN[T],z=kk[0];
- $("kn").innerHTML=kk.map(function(k){if(k[2]<z[2])z=k;var c=k[2]<50?"var(--bad)":k[2]<65?"var(--warn)":"var(--ok)";return '<div class="tp"><div class="r"><span><b>'+k[0]+'</b> <span class="mut">'+k[1]+'</span></span><b style="color:'+c+'">%'+k[2]+'</b></div><div class="bar" style="height:6px;margin-top:6px"><i style="width:'+k[2]+'%;background:'+c+'"></i></div></div>'}).join("");
- $("coach").innerHTML+='<p class="mut" style="margin-top:10px">Konu analizine göre öncelik: <b>'+z[0]+'</b> (%'+z[2]+' doğruluk).</p>'}
+ if(!hasD){
+   s='<circle cx="60" cy="60" r="44" fill="none" stroke="var(--line)" stroke-width="16"/>';
+   l='<span style="--c:var(--ok)"><b>0</b> Doğru</span><span style="--c:var(--bad)"><b>0</b> Yanlış</span><span style="--c:var(--line)"><b>'+tt+'</b> Boş</span>';
+   $("dn").innerHTML=s+'<text x="60" y="65" text-anchor="middle" style="font-size:16px;font-weight:800;fill:var(--mut)">%0</text>';
+ } else {
+   [[dd,"var(--ok)","Doğru"],[yy,"var(--bad)","Yanlış"],[bb,"var(--line)","Boş"]].forEach(function(a){var n=a[0]/tt*C;
+    s+='<circle cx="60" cy="60" r="44" fill="none" stroke="'+a[1]+'" stroke-width="16" stroke-dasharray="'+n+" "+(C-n)+'" stroke-dashoffset="'+(-o)+'" transform="rotate(-90 60 60)"/>';o+=n;
+    l+='<span style="--c:'+a[1]+'"><b>'+a[0]+'</b> '+a[2]+'</span>'});
+   $("dn").innerHTML=s+'<text x="60" y="65" text-anchor="middle" style="font-size:16px;font-weight:800;fill:var(--ink)">%'+Math.round(dd/tt*100)+'</text>';
+ }
+ $("dg").innerHTML=l;
+ var kk=KN[T];
+ $("kn").innerHTML=kk.map(function(k){var c=k[2]<50?"var(--bad)":k[2]<65?"var(--warn)":"var(--ok)";return '<div class="tp"><div class="r"><span><b>'+k[0]+'</b> <span class="mut">'+k[1]+'</span></span><b style="color:'+c+'">%'+k[2]+'</b></div><div class="bar" style="height:6px;margin-top:6px"><i style="width:'+k[2]+'%;background:'+c+'"></i></div></div>'}).join("")}
 
 /* onboarding */
 var OB={i:0,h:[35,15,30,15],a:[35,11,10,10],al:null},SL=document.querySelectorAll("#tk .sl"),SG=document.querySelectorAll("#seg i");
@@ -1021,7 +993,6 @@ function obAc(s){var q=P||{ad:"",so:"",me:"",un:"",bo:"",h:[35,15,30,15]};
  $("o_ad").value=q.ad;$("o_so").value=q.so;$("o_me").value=q.me;$("o_un").value=q.un;$("o_bo").value=q.bo;OB.h=q.h.slice();OB.al=q.al||null;OB.a=(q.a||AL[q.al||"Sayısal"].h).slice();alSec();nr2B();nrYaz();
  $("ob").hidden=false;document.body.style.overflow="hidden";go(typeof s==="number"?s:0)}
 function obKapat(){$("ob").classList.add("out");setTimeout(function(){$("ob").hidden=true;$("ob").classList.remove("out");document.body.style.overflow=""},400)}
-$("nr").innerHTML=AD.map(function(a,i){return '<div class="nr"><span>'+a+'<br><small>en fazla '+TOP[i]+'</small></span><div><button type="button" data-i="'+i+'" data-d="-1" aria-label="'+a+' hedefini azalt">−</button><b id="n'+i+'">0</b><button type="button" data-i="'+i+'" data-d="1" aria-label="'+a+' hedefini artır">+</button></div></div>'}).join("");
 $("ch").innerHTML=MES.map(function(m){return '<button type="button" data-m="'+m+'">'+m+'</button>'}).join("");
 $("ch").onclick=function(e){if(e.target.dataset.m){$("o_me").value=e.target.dataset.m;$("ileri").disabled=!gecerli()}};
 [["nr",S.TYT,"h","TYT"],["nr2",S.AYT,"a","AYT"]].forEach(function(g){$(g[0]).innerHTML=g[1].ad.map(function(a,i){return '<div class="nr"><span>'+a+'<br><small>en fazla '+g[1].top[i]+'</small></span><div><button type="button" data-k="'+g[2]+'" data-i="'+i+'" data-d="-1" aria-label="'+g[3]+' '+a+' hedefini azalt">−</button><b id="n'+g[2]+i+'">0</b><button type="button" data-k="'+g[2]+'" data-i="'+i+'" data-d="1" aria-label="'+g[3]+' '+a+' hedefini artır">+</button></div></div>'}).join("")});
@@ -1032,38 +1003,26 @@ $("ileri").onclick=function(){if(OB.i<5){go(OB.i+1);return}
  P={ad:$("o_ad").value.trim(),so:$("o_so").value.trim(),me:$("o_me").value.trim(),un:$("o_un").value.trim(),bo:$("o_bo").value.trim(),h:OB.h.slice(),a:OB.a.slice(),al:OB.al};
  oW();uygula();obKapat();window.scrollTo(0,0);toast("Hoş geldin, "+P.ad)};
 $("duz").onclick=obAc;
+
 /* maskot */
-var MS="data:image/webp;base64,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";
+var MS="ikon-192.png";
 (function(){
- var SYS="Sen YKS (TYT/AYT) öğrencilerine yardım eden sevimli bir timsah maskot ve çalışma koçusun, adın Togi. Türkçe yaz. Samimi, motive edici ve net ol; cevapların kısa olsun (en fazla yaklaşık 120 kelime, gerekirse adım adım). Markdown, yıldız veya başlık kullanma, düz metin yaz. Ders sorularını (konu açıklama, soru çözümü) doğru ve adım adım anlat; emin olmadığın şeyi uydurma, bunu söyle. Öğrencinin bilgisini ve netlerini cevabına yansıt ama her cevapta tekrar etme. YKS ve çalışma düzeniyle ilgisi olmayan konularda nazikçe YKS’ye yönlendir. Öğrenci çok bunalmış görünürse onu dinle ve güvendiği bir yetişkinle ya da bir uzmanla konuşmasını öner.";
  var hist=[],busy=false;document.querySelectorAll("img.tgi").forEach(function(i){i.src=MS});
  var fab=document.createElement("button");fab.className="ms";fab.type="button";fab.setAttribute("aria-label","Togi’ye soru sor");fab.innerHTML='<img alt="" src="'+MS+'">';
- var tip=document.createElement("div");tip.className="msb";tip.textContent="Ben Togi, bana soru sorabilirsin!";
  var cp=document.createElement("div");cp.className="cp";cp.hidden=true;cp.setAttribute("role","dialog");cp.setAttribute("aria-modal","true");cp.setAttribute("aria-label","Togi");
  cp.innerHTML='<div class="pn2"><div class="ch"><img alt="" src="'+MS+'"><div style="flex:1"><b>Togi</b><p class="mut">YKS sorularını birlikte çözelim</p></div><button class="x" type="button" id="cx">Kapat</button></div><div class="cm" id="cm" role="log" aria-live="polite"></div><div class="cc" id="cc"></div><div class="ci"><input id="cq" placeholder="Sorunu yaz…" maxlength="500" autocomplete="off" aria-label="Sorun"><button class="btn" id="cs" type="button" style="width:auto;margin:0;padding:0 16px">Gönder</button></div></div>';
  var tw=document.querySelector(".tw");tw.insertBefore(fab,tw.querySelector(".mbtn"));document.body.appendChild(cp);
- setTimeout(function(){tip.hidden=true},7000);
  function add(c,t){var d=document.createElement("div");d.className="b "+c;d.textContent=t;$("cm").appendChild(d);$("cm").scrollTop=$("cm").scrollHeight;return d}
- function ctx(){var s="Öğrenci: "+(P?P.ad+"; hedef meslek: "+P.me+"; hedef: "+P.un+" "+P.bo+"; alan: "+P.al:"bilinmiyor")+". Şu an baktığı sınav: "+T+".";
-  try{var e=D[D.length-1];s+=" Son denemesi ("+e[0]+"): "+AD.map(function(a,i){return a+" "+f(nt(e[1][i]))+"/"+TOP[i]+(P?" (hedef "+hh()[i]+")":"")}).join(", ")+". Toplam "+f(tot(e))+" net.";
-   s+=" Zayıf konuları: "+KN[T].filter(function(k){return k[2]<60}).map(function(k){return k[0]+" (%"+k[2]+")"}).join(", ")+"."}catch(x){}
-  return s}
- async function send(q){q=q.trim();if(!q||busy)return;
+ function send(q){q=q.trim();if(!q||busy)return;
   add("u",q);hist.push({role:"user",content:q});$("cq").value="";$("cc").hidden=true;busy=true;$("cs").disabled=true;
   var b=add("m","Togi düşünüyor…");
-  if(AI_MOD==="yerel"||AI_MOD==="hibrit"){var a0=togiLocal(q);if(!(AI_MOD==="hibrit"&&a0.indexOf("Bunu tam anlayamadım")===0)){setTimeout(function(){b.textContent=a0;hist.push({role:"assistant",content:a0});$("cm").scrollTop=$("cm").scrollHeight;busy=false;$("cs").disabled=false},450);return}}
-  try{if(typeof claude==="undefined"||!claude.use)throw{code:"none"};
-   var sm=await claude.use("sample");if(!sm)throw{code:"none"};
-   var tr=hist.slice(-8).map(function(m){return (m.role==="user"?"Öğrenci: ":"Togi: ")+m.content}).join("\n");
-   var r=await sm(SYS+"\n\nÖğrenci bilgisi: "+ctx()+"\n\nSohbet:\n"+tr+"\n\nTogi:",{cache:false,onText:function(o){b.textContent=o.text;$("cm").scrollTop=$("cm").scrollHeight}});
-   b.textContent=r.text;hist.push({role:"assistant",content:r.text})}
-  catch(x){hist.pop();var c=x&&x.code;b.textContent=c==="not_granted"?"Sana cevap verebilmem için izin vermen gerekiyor.":c==="rate_limited"?"Çok hızlı gidiyoruz, biraz sonra tekrar dene.":c==="none"?"Soru sorma bu görünümde kullanılamıyor. Sayfayı kendi hesabınla açmayı dene.":"Şu an cevap veremedim, tekrar dener misin?"}
-  busy=false;$("cs").disabled=false}
- function open(){cp.hidden=false;tip.hidden=true;document.body.style.overflow="hidden";
+  var a0=togiLocal(q);
+  setTimeout(function(){b.textContent=a0;hist.push({role:"assistant",content:a0});$("cm").scrollTop=$("cm").scrollHeight;busy=false;$("cs").disabled=false},350)}
+ function open(){cp.hidden=false;document.body.style.overflow="hidden";
   if(!$("cm").children.length){add("m","Merhaba"+(P?" "+P.ad:"")+"! Ben Togi. YKS’yle ilgili aklına takılan her şeyi sorabilirsin: konu, soru, çalışma planı…")}
   $("cq").focus()}
  function close(){cp.hidden=true;document.body.style.overflow=""}
- $("cc").innerHTML=["Bu hafta neye çalışmalıyım?","Netlerimi nasıl artırırım?","Zayıf konularım ne?","Motivasyonum yok","Telefonu bırakamıyorum","Sınav günü ne yapmalıyım?"].map(function(t){return '<button type="button">'+t+'</button>'}).join("");
+ $("cc").innerHTML=["Bu hafta neye çalışmalıyım?","Netlerimi nasıl artırırım?","Zayıf konularım ne?","Motivasyonum yok","Telefonu bırakamıyorum"].map(function(t){return '<button type="button">'+t+'</button>'}).join("");
  $("cc").onclick=function(e){var b=e.target.closest("button");if(b)send(b.textContent)};
  $("cs").onclick=function(){send($("cq").value)};
  $("cq").addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();send($("cq").value)}});
@@ -1081,75 +1040,58 @@ var MS="data:image/webp;base64,UklGRqAwAABXRUJQVlA4WAoAAAAQAAAA2wAA2wAAQUxQSLARA
  d.onclick=function(e){var b=e.target.closest("button");if(!b)return;if(b.dataset.m){document.documentElement.dataset.mode=b.dataset.m;try{localStorage.setItem("yks_mod",b.dataset.m)}catch(x){}var tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.content=b.dataset.m==="light"?"#f6f7fb":"#09090b";mk2();return}cur=b.dataset.a;document.documentElement.dataset.accent=cur;try{localStorage.setItem("yks_tema2",cur)}catch(x){}mark()};
  mark();mk2()})();
 
-/* gerçek belge okuma */
-var OKU_SEQ=0;
-function okuMsg(c){return{not_granted:"Fotoğrafı okuyabilmem için izin vermen gerekiyor.",rate_limited:"Çok fazla deneme yapıldı, biraz sonra tekrar dene.",queue_overflow:"Çok fazla deneme yapıldı, biraz sonra tekrar dene.",images_unavailable:"Bu görünümde fotoğraf okuma kapalı. Sayfayı claude.ai ya da Claude uygulamasında kendi hesabınla aç.",not_declared:"Bu görünümde fotoğraf okuma kapalı. Sayfayı claude.ai ya da Claude uygulamasında kendi hesabınla aç.",capability_disabled:"Bu görünümde fotoğraf okuma kapalı. Sayfayı claude.ai ya da Claude uygulamasında kendi hesabınla aç.",capability_removed:"Bu görünümde fotoğraf okuma kapalı. Sayfayı claude.ai ya da Claude uygulamasında kendi hesabınla aç.",image_rejected:"Fotoğraf kabul edilmedi (biçim ya da boyut). Kamerayla yeniden çek.",invalid_json:"Fotoğraftaki sonuçlar okunamadı. Sonuç tablosunun net göründüğü, iyi ışıklı bir fotoğraf çek.",empty_completion:"Fotoğraftaki sonuçlar okunamadı. Sonuç tablosunun net göründüğü, iyi ışıklı bir fotoğraf çek.",refused:"Fotoğraftaki sonuçlar okunamadı. Sonuç tablosunun net göründüğü, iyi ışıklı bir fotoğraf çek.",session_expired:"Oturum süresi doldu. Sayfayı yenileyip tekrar dene.",sampling_disabled:"Hesabında bu özellik şu an kapalı."}[c]||"Fotoğraf şu an okunamadı. Tekrar dene."}
-var OKU_YOK="Fotoğraf okuma bu görünümde kullanılamıyor. Sayfayı claude.ai üzerinden kendi hesabınla açmayı dene.";
-async function okuAI(bl){
- if(typeof claude==="undefined"||!claude.use)throw{m:OKU_YOK,c:"claude_yok"};
- var sm=await claude.use("sample");if(!sm)throw{m:OKU_YOK,c:"sample_yok"};
- var lm=await sm.limits().catch(function(){return null});if(!lm||!lm.images)throw{m:OKU_YOK,c:lm?"gorsel_yok":"limits_hata"};
- var names=AD.map(function(a,i){return a+" (en fazla "+TOP[i]+" soru)"}).join(", ");
- var pr="Ekteki fotoğraf bir YKS deneme sınavı sonuç belgesi ya da optik form olmalı. Görevin: belgede gerçekten yazan sayıları okumak. KESİNLİKLE tahmin etme, hesaplayıp uydurma, belgede görmediğin hiçbir değeri yazma. Beklenen sınav: "+T+". Okunacak dersler (bu sırayla): "+names+". Her ders için belgede yazan DOĞRU (d) ve YANLIŞ (y) sayısını oku. Görüntü boşsa, bulanıksa, bir deneme sonuç belgesi değilse, beklenen sınav değilse ya da bu derslerin doğru/yanlış sayıları net okunamıyorsa okunabildi alanını false yap ve nedenini kısaca Türkçe yaz. Okuma güvenin düşükse guven alanına dusuk yaz. Sadece şu JSON'u döndür: {\"okunabildi\":true veya false,\"neden\":\"...\",\"sinav\":\"TYT\" veya \"AYT\" veya \"bilinmiyor\",\"guven\":\"yuksek\" veya \"orta\" veya \"dusuk\",\"dersler\":[{\"ad\":\"ders adı\",\"d\":sayı,\"y\":sayı}]}. dersler yalnızca okunabildi true ise dolu olsun ve yukarıdaki ders sırasını izlesin.";
- var j;try{j=await sm.json(pr,{images:[bl],cache:false})}catch(e){var c=e&&e.code;throw{m:okuMsg(c),c:c||(e&&e.message)}}
- if(!j||j.okunabildi!==true)throw "Bu fotoğraftan deneme sonucu okunamadı"+(j&&j.neden?": "+String(j.neden).slice(0,160):".");
- if(j.guven==="dusuk")throw "Fotoğraf yeterince net değil, değerleri güvenle okuyamadım. Daha net ve ışıklı çekip tekrar dene.";
- if(j.sinav&&j.sinav!=="bilinmiyor"&&j.sinav!==T)throw "Bu belge "+j.sinav+" sonucu gibi görünüyor, şu an "+T+" sekmesindesin. Doğru sekmeye geçip tekrar dene.";
- var ds=j.dersler;if(!Array.isArray(ds)||ds.length!==AD.length)throw "Dersler eksiksiz okunamadı. Belgenin tamamı görünecek şekilde tekrar çek.";
- var out=ds.map(function(x,i){var d=Number(x&&x.d),y=Number(x&&x.y);return(Number.isInteger(d)&&Number.isInteger(y)&&d>=0&&y>=0&&d+y<=TOP[i])?[d,y]:null});
- if(out.indexOf(null)>-1)throw "Okunan sayılar geçersiz görünüyor (ders soru sayısını aşıyor). Fotoğrafı daha net çekip tekrar dene.";
- if(out.every(function(v){return v[0]+v[1]===0}))throw "Belgede doğru ya da yanlış sayısı okunamadı. Sonuç tablosunun göründüğü bir fotoğraf çek.";
- return out}
-function oku(fl){var seq=++OKU_SEQ,tm=null,i=0;adim(2);$("pv").className="pv";$("pb").style.width="0";$("er").hidden=true;$("steps").hidden=false;$("im").removeAttribute("src");
- var ST=["Görüntü hazırlanıyor","Dersler ve bölümler aranıyor","Doğru ve yanlış sayıları okunuyor","Sonuçlar kontrol ediliyor"];
- $("steps").innerHTML=ST.map(function(x){return '<div class="st"><span></span>'+x+'</div>'}).join("");
- var els=$("steps").children;
- function adv(){if(seq!==OKU_SEQ)return;if(i>0){els[i-1].className="st ok";els[i-1].firstChild.textContent="✓"}$("pb").style.width=(i/ST.length*100)+"%";els[i].className="st on";if(i<ST.length-1){i++;tm=setTimeout(adv,1500)}}
- function fail(m,d){clearTimeout(tm);if(seq!==OKU_SEQ)return;$("pv").className="pv done";$("steps").hidden=true;$("pb").style.width="0";$("ert").textContent=m;$("erd").textContent=d?"Hata kodu: "+d:"";$("er").hidden=false}
- adv();
- if(fl.type==="application/pdf"){fail("Şimdilik yalnızca fotoğraf okunabiliyor. Sonuç belgesinin fotoğrafını çek ya da galeriden bir resim seç.");return}
- var fr=new FileReader();fr.onerror=function(){fail("Dosya açılamadı. Tekrar dene.")};
- fr.onload=function(){var im=new Image();
-  im.onerror=function(){fail("Görüntü açılamadı. Başka bir fotoğraf dene.")};
-  im.onload=function(){if(seq!==OKU_SEQ)return;$("im").src=fr.result;
-   var sc=Math.min(1,1600/Math.max(im.width,im.height)),cv=document.createElement("canvas");cv.width=Math.max(1,Math.round(im.width*sc));cv.height=Math.max(1,Math.round(im.height*sc));
-   cv.getContext("2d").drawImage(im,0,0,cv.width,cv.height);
-   cv.toBlob(function(bl){if(!bl){fail("Görüntü işlenemedi.");return}
-    okuAI(bl).then(function(r){if(seq!==OKU_SEQ)return;clearTimeout(tm);for(var k=0;k<els.length;k++){els[k].className="st ok";els[k].firstChild.textContent="✓"}$("pb").style.width="100%";$("pv").className="pv done";cur=r;setTimeout(function(){if(seq===OKU_SEQ)sonuc()},500)})
-    .catch(function(m){var d=m&&typeof m==="object"?(m.c||m.code||m.message):"";fail(typeof m==="string"?m:(m&&m.m)||"Fotoğraf şu an okunamadı. Tekrar dene.",d)})},"image/jpeg",.85)};
-  im.src=fr.result};
- fr.readAsDataURL(fl)}
-$("ery").onclick=function(){adim(1)};
-
 /* alan seçimi */
-var AL={"Sayısal":{ad:["Matematik","Fizik","Kimya","Biyoloji"],top:[40,14,13,13],h:[35,11,10,10],d:S.AYT.d,kn:KN.AYT},
+var AL={"Sayısal":{ad:["Matematik","Fizik","Kimya","Biyoloji"],top:[40,14,13,13],h:[35,11,10,10],kn:KN.AYT},
 "Eşit Ağırlık":{ad:["Matematik","Edebiyat","Tarih","Coğrafya"],top:[40,24,10,6],h:[34,20,8,4],
- d:[["D1",[[24,8],[14,6],[5,3],[3,1]]],["D2",[[26,7],[15,5],[6,2],[3,1]]],["D3",[[28,6],[16,5],[6,2],[4,1]]],["D4",[[27,8],[17,4],[7,2],[4,1]]],["D5",[[30,5],[18,4],[7,2],[4,1]]]],
  kn:[["Fonksiyonlar","Matematik",41],["Türev","Matematik",39],["Şiir bilgisi","Edebiyat",58],["Osmanlı kültür ve medeniyet","Tarih",52],["Türkiye’nin yer şekilleri","Coğrafya",70]]},
 "Sözel":{ad:["Edebiyat","Tarih","Coğrafya","Felsefe ve Din"],top:[24,21,17,18],h:[20,17,13,14],
- d:[["D1",[[12,5],[8,5],[6,4],[7,4]]],["D2",[[14,4],[9,5],[7,3],[8,3]]],["D3",[[15,4],[10,4],[8,3],[9,3]]],["D4",[[16,3],[11,4],[8,3],[10,3]]],["D5",[[18,3],[12,4],[9,3],[11,2]]]],
  kn:[["Edebi akımlar","Edebiyat",47],["Osmanlı Devleti","Tarih",44],["Nüfus ve yerleşme","Coğrafya",53],["Bilgi felsefesi","Felsefe ve Din",61],["Roman ve hikaye","Edebiyat",72]]},
 "Dil":{ad:["Yabancı Dil"],top:[80],h:[60],
- d:[["D1",[[40,20]]],["D2",[[46,16]]],["D3",[[52,14]]],["D4",[[50,16]]],["D5",[[58,12]]]],
  kn:[["Kelime bilgisi","Yabancı Dil",58],["Dil bilgisi","Yabancı Dil",51],["Paragraf","Yabancı Dil",66],["Cümle tamamlama","Yabancı Dil",49],["Çeviri","Yabancı Dil",62]]}};
-TIP["Edebiyat"]=["Her gün 20 edebiyat sorusu çöz, yanlışlarını not et.","Dönem ve akım özetlerini haftada bir tekrar et."];
-TIP["Tarih"]=["Kronolojiyi şemaya dök ve haftada bir tekrar et.","Her konu sonunda 15 soru çöz."];
-TIP["Coğrafya"]=["Harita ve görsel yorumlama sorularına ağırlık ver.","Her konu sonunda 15 soru çöz."];
-TIP["Felsefe ve Din"]=["Kavram kartı hazırla, her akşam gözden geçir.","Konu başına 20 soru çöz."];
-TIP["Yabancı Dil"]=["Her gün 20 yeni kelime çalış ve tekrar et.","Haftada 3 paragraf ve 2 çeviri seti çöz."];
-function alanUygula(){var A=AL[P&&P.al]||AL["Sayısal"];if(P&&(!P.a||P.a.length!==A.ad.length))P.a=A.h.slice();S.AYT={ad:A.ad,top:A.top,d:A.d};KN.AYT=A.kn;if(T==="AYT"){AD=A.ad;TOP=A.top;D=A.d}}
-function yeniKayit(){try{localStorage.removeItem("yks_profil");localStorage.removeItem("yks_prog")}catch(e){}
- P=null;PR=null;alanUygula();$("hi").textContent="Merhaba";$("pf").textContent="";$("pnm").textContent="";$("av").textContent="•";obAc()}
+function alanUygula(){var A=AL[P&&P.al]||AL["Sayısal"];if(P&&(!P.a||P.a.length!==A.ad.length))P.a=A.h.slice();S.AYT.ad=A.ad;S.AYT.top=A.top;KN.AYT=A.kn;if(T==="AYT"){AD=A.ad;TOP=A.top;D=S.AYT.d}}
+function yeniKayit(){try{localStorage.removeItem("yks_profil");localStorage.removeItem("yks_prog");localStorage.removeItem("yks_denemeler_v1");localStorage.removeItem("yks_kart");localStorage.removeItem("yks_kurut")}catch(e){}
+ P=null;PR=null;KS=null;SS=null;S.TYT.d=[];S.AYT.d=[];D=S[T].d;alanUygula();$("hi").textContent="Merhaba";$("pf").textContent="";$("pnm").textContent="";$("av").textContent="•";render();obAc()}
 function alSec(){document.querySelectorAll("#alg .alb").forEach(function(b){b.classList.toggle("on",b.dataset.al===OB.al)})}
 function nr2B(){var A=AL[OB.al||"Sayısal"];$("nr2").innerHTML=A.ad.map(function(a,i){return '<div class="nr"><span>'+a+'<br><small>en fazla '+A.top[i]+'</small></span><div><button type="button" data-k="a" data-i="'+i+'" data-d="-1" aria-label="AYT '+a+' hedefini azalt">−</button><b id="na'+i+'">0</b><button type="button" data-k="a" data-i="'+i+'" data-d="1" aria-label="AYT '+a+' hedefini artır">+</button></div></div>'}).join("")}
 $("alg").innerHTML=Object.keys(AL).map(function(k){return '<button type="button" class="alb" data-al="'+k+'"><b>'+k+'</b><span class="mut">'+AL[k].ad.join(", ")+'</span></button>'}).join("");
 $("alg").onclick=function(e){var b=e.target.closest("button");if(!b)return;var k=b.dataset.al;if(OB.al!==k){OB.al=k;OB.a=AL[k].h.slice();nr2B()}alSec();nrYaz();$("ileri").disabled=!gecerli()};
 
-var LEG;P=oR();LEG=!!(P&&!P.al);if(P&&!P.al)P.al="Sayısal";if(P&&!P.a)P.a=[35,11,10,10];if(P&&P.ad&&P.h&&P.h.length===4)uygula();else{P=null;obAc()}
-if(LEG){LEG=false;obAc(3);OB.al=null;alSec();$("ileri").disabled=!gecerli()}
+/* canlı kamera & elle giriş */
+var KC=null,cur=null;
+function kcStop(){if(KC){KC.getTracks().forEach(function(t){t.stop()});KC=null}var v=$("kv");if(v)v.srcObject=null}
+async function kcStart(){
+ try{KC=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:"environment"},width:{ideal:1920},height:{ideal:1080}},audio:false})}
+ catch(e){toast("Kamera açılamadı. Sonuçları elle girebilirsin.");return}
+ adim(4);var v=$("kv");v.srcObject=KC;try{await v.play()}catch(e){}}
+function kcShot(){var v=$("kv");if(!v||!v.videoWidth){toast("Kamera henüz hazır değil");return}
+ var c=document.createElement("canvas");c.width=v.videoWidth;c.height=v.videoHeight;c.getContext("2d").drawImage(v,0,0);
+ c.toBlob(function(bl){if(!bl){toast("Görüntü alınamadı");return}kcStop();oku(bl)},"image/jpeg",.92)}
+if(!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia))$("kc").hidden=true;
+$("kc").onclick=kcStart;$("kcc").onclick=kcShot;$("kci").onclick=function(){kcStop();adim(1)};
 
-/* ekleme akışı */
-var cur=null,ocr=null;
+function elAc(){var h="";AD.forEach(function(a,i){h+='<div class="mr"><div><b>'+esc(a)+'</b><small class="mut">en fazla '+TOP[i]+' soru</small></div><input type="number" inputmode="numeric" min="0" max="'+TOP[i]+'" placeholder="Doğru" data-k="d" data-i="'+i+'" aria-label="'+esc(a)+' doğru"><input type="number" inputmode="numeric" min="0" max="'+TOP[i]+'" placeholder="Yanlış" data-k="y" data-i="'+i+'" aria-label="'+esc(a)+' yanlış"></div>'});$("elr").innerHTML=h;$("elm").textContent="";adim(5)}
+function elOk(){var v=AD.map(function(){return[0,0]}),any=false,bad="";
+ document.querySelectorAll("#elr input").forEach(function(x){if(bad)return;var i=+x.dataset.i,n=x.value===""?0:Number(x.value);if(x.value!=="")any=true;if(!Number.isInteger(n)||n<0){bad=AD[i]+": sayı geçersiz";return}v[i][x.dataset.k==="d"?0:1]=n});
+ if(!bad)v.forEach(function(r,i){if(!bad&&r[0]+r[1]>TOP[i])bad=AD[i]+": doğru + yanlış "+TOP[i]+" sorudan fazla olamaz"});
+ if(!bad&&!any)bad="En az bir dersin doğru ve yanlış sayısını gir.";
+ if(bad){$("elm").textContent=bad;return}cur=v;sonuc()}
+$("el").onclick=elAc;$("ere").onclick=elAc;$("elb").onclick=elOk;$("eli").onclick=function(){adim(1)};
+
+function oku(fl){
+ adim(2);$("pv").className="pv";$("pb").style.width="40%";$("er").hidden=true;$("steps").hidden=false;
+ $("steps").innerHTML='<div class="st on"><span></span>Belge inceleniyor...</div>';
+ var fr=new FileReader();
+ fr.onload=function(){$("im").src=fr.result;
+  setTimeout(function(){
+   $("pv").className="pv done";$("steps").hidden=true;$("pb").style.width="0";
+   $("ert").textContent="Tarayıcı üzerinden otomatik optik okuma şu an kapalı. Sonuçları aşağıdaki butondan 10 saniyede elle girebilirsin.";
+   $("erd").textContent="";$("er").hidden=false;
+  },900);
+ };
+ fr.readAsDataURL(fl);
+}
+$("ery").onclick=function(){adim(1)};
+
 function adim(n){["s1","s2","s3","s4","s5"].forEach(function(k){$(k).hidden=(k!=="s"+n)});if(n!==4&&window.kcStop)kcStop()}
 function ac(){$("sheet").hidden=false;adim(1);document.body.style.overflow="hidden"}
 function kapat(){if(window.kcStop)kcStop();$("sheet").hidden=true;document.body.style.overflow="";$("fk").value="";$("fg").value=""}
@@ -1157,57 +1099,87 @@ function toast(m){$("ts").textContent=m;$("ts").hidden=false;setTimeout(function
 $("ekle").onclick=function(){if(ZR.length){toast("Önce zorunlu savaş kartlarını bitir: "+ZR.join(", "));goV("kartlar");return}ac()};$("kapat").onclick=kapat;$("yeni").onclick=function(){adim(1)};
 $("kam").onclick=function(){$("fk").click()};$("gal").onclick=function(){$("fg").click()};
 $("fk").onchange=$("fg").onchange=function(e){var fl=e.target.files[0];if(fl)oku(fl)};
-
 function rnd(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;var t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
-function uret(fl){var r=rnd(fl.size+fl.lastModified%9973),res=[];
- TOP.forEach(function(t){var d=Math.round(t*(.6+r()*.32)),y=Math.round((t-d)*(.3+r()*.4));res.push([d,y])});return res}
 
-function okuSim(fl){
- adim(2);$("pv").className="pv";$("pb").style.width="0";$("steps").innerHTML="";
- if(fl.type.indexOf("image")===0){var fr=new FileReader();fr.onload=function(){$("im").src=fr.result};fr.readAsDataURL(fl)}else{$("im").removeAttribute("src")}
- var ST=["Görüntü düzeltiliyor","Dersler ve bölümler bulunuyor","Doğru ve yanlış sayıları okunuyor","Netler hesaplanıyor"];
- $("steps").innerHTML=ST.map(function(x){return '<div class="st"><span></span>'+x+'</div>'}).join("");
- var els=$("steps").children,i=0;
- (function sonraki(){
-  if(i>0){els[i-1].className="st ok";els[i-1].firstChild.textContent="✓"}
-  $("pb").style.width=(i/ST.length*100)+"%";
-  if(i>=ST.length){$("pv").className="pv done";cur=uret(fl);setTimeout(sonuc,500);return}
-  els[i].className="st on";i++;setTimeout(sonraki,900)})();
-}
 function sonuc(){
  var h="<tr><th>Ders</th><th>D</th><th>Y</th><th>B</th><th>Net</th></tr>",tt=0;
  cur.forEach(function(v,i){var b=TOP[i]-v[0]-v[1];tt+=nt(v);h+="<tr><td>"+AD[i]+"</td><td>"+v[0]+"</td><td>"+v[1]+"</td><td>"+b+"</td><td><b>"+f(nt(v))+"</b></td></tr>"});
  h+='<tr><td><b>Toplam</b></td><td></td><td></td><td></td><td><b>'+f(tt)+"</b></td></tr>";
  $("tb").innerHTML=h;adim(3)}
-$("kaydet").onclick=function(){D.push(["D"+(D.length+1),cur]);render();kapat();window.scrollTo({top:0,behavior:"smooth"});if(ZR.length)zgo();else toast("Deneme kaydedildi")};
+$("kaydet").onclick=function(){
+ D.push(["D"+(D.length+1),cur]);
+ dW();
+ render();
+ kapat();
+ window.scrollTo({top:0,behavior:"smooth"});
+ if(ZR.length)zgo();else toast("Deneme kaydedildi")
+};
+
+/* Başlangıç Kontrolü */
+P=oR();
+if(P&&P.ad&&P.h&&P.h.length===4){
+ if(!P.al)P.al="Sayısal";
+ if(!P.a)P.a=[35,11,10,10];
+ uygula();
+} else {
+ P=null;
+ render();
+ obAc();
+}
 </script>
+
+<!-- Tek ve Sorunsuz PWA Kurulum Yöneticisi -->
 <script>
 (function () {
-  if (window.top !== window) return;                       // iframe/önizleme içinde çalışma
+  if (window.top !== window) return;
 
-  /* Service worker kaydı (yalnızca http/https üzerinde) */
+  /* 1. Manifest Bağlantısı (GitHub Pages alt klasörleri için tam uyumlu) */
+  var baseUrl = location.href.split('#')[0].split('?')[0].replace(/\/[^\/]*$/, '/');
+  var manifestObj = {
+    name: "TOGİ Sınav Arkadaşı",
+    short_name: "TOGİ",
+    description: "YKS TYT ve AYT deneme net takip ve çalışma koçu",
+    start_url: baseUrl,
+    scope: baseUrl,
+    display: "standalone",
+    orientation: "portrait",
+    background_color: "#09090b",
+    theme_color: "#5b3df5",
+    lang: "tr",
+    icons: [
+      { src: baseUrl + "ikon-192.png", sizes: "192x192", type: "image/png", purpose: "any maskable" },
+      { src: baseUrl + "ikon-512.png", sizes: "512x512", type: "image/png", purpose: "any maskable" }
+    ]
+  };
+  var mfLink = document.createElement("link");
+  mfLink.rel = "manifest";
+  mfLink.href = URL.createObjectURL(new Blob([JSON.stringify(manifestObj)], { type: "application/manifest+json" }));
+  document.head.appendChild(mfLink);
+
+  /* 2. Service Worker Kaydı */
   if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
     window.addEventListener('load', function () {
       navigator.serviceWorker.register('service-worker.js').catch(function () {});
     });
   }
 
-  var KAPALI = 'togi_pwa_kapali', KURULU = 'togi_pwa_kurulu';
+  /* 3. Ana Ekrana Ekleme Çubuğu */
+  var KAPALI = 'togi_pwa_kapali_v2', KURULU = 'togi_pwa_kurulu_v2';
   function oku(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function yaz(k) { try { localStorage.setItem(k, '1'); } catch (e) {} }
 
   var bar = document.getElementById('togiPwa');
-  if (!bar) return;
   var btn = document.getElementById('tpInstall');
   var sub = document.getElementById('tpSub');
   var kapat = document.getElementById('tpClose');
+  if (!bar) return;
 
   function standalone() {
     var mm = window.matchMedia;
     return (mm && (mm('(display-mode: standalone)').matches ||
                    mm('(display-mode: fullscreen)').matches ||
                    mm('(display-mode: minimal-ui)').matches)) ||
-           navigator.standalone === true;                  // iOS
+           navigator.standalone === true;
   }
   function iosMu() {
     var ua = navigator.userAgent || '';
@@ -1216,14 +1188,11 @@ $("kaydet").onclick=function(){D.push(["D"+(D.length+1),cur]);render();kapat();w
   function goster() { bar.hidden = false; }
   function gizle() { bar.hidden = true; }
 
-  /* Zaten kurulu / ana ekrandan açılmış / daha önce kapatılmış → hiç gösterme */
   if (standalone()) { yaz(KURULU); return; }
   if (oku(KURULU) || oku(KAPALI)) return;
 
-  /* X: bir daha gösterme */
   kapat.addEventListener('click', function () { yaz(KAPALI); gizle(); });
 
-  /* Android / Chrome: yüklenebilirlik olayını yakala */
   var dp = null;
   window.addEventListener('beforeinstallprompt', function (e) {
     e.preventDefault();
@@ -1232,21 +1201,25 @@ $("kaydet").onclick=function(){D.push(["D"+(D.length+1),cur]);render();kapat();w
     sub.textContent = 'Tek dokunuşla yükle, uygulama gibi tam ekran aç.';
     goster();
   });
+
   btn.addEventListener('click', function () {
-    if (!dp) return;
+    if (!dp) {
+      alert("Tarayıcının sağ üstündeki üç nokta (⋮) menüsüne dokunup 'Ana ekrana ekle' veya 'Uygulamayı yükle' seçeneğine basabilirsin.");
+      return;
+    }
     var ev = dp; dp = null;
-    ev.prompt();                                           // telefonun kendi "Yükle" penceresi
+    ev.prompt();
     ev.userChoice.then(function (c) {
       if (c && c.outcome === 'accepted') yaz(KURULU);
       gizle();
     });
   });
+
   window.addEventListener('appinstalled', function () { yaz(KURULU); dp = null; gizle(); });
 
-  /* iOS / Safari: olay yok, kısa yönlendirme göster */
   if (iosMu()) {
     btn.hidden = true;
-    sub.innerHTML = 'Alttaki <svg class="tp-sh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4M5 11v8a2 2 0 002 2h10a2 2 0 002-2v-8"/></svg> Paylaş düğmesine bas, sonra “Ana Ekrana Ekle”yi seç.';
+    sub.innerHTML = 'Alttaki Paylaş düğmesine bas, sonra “Ana Ekrana Ekle”yi seç.';
     setTimeout(goster, 800);
   }
 })();
