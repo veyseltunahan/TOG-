@@ -58,6 +58,7 @@ self.addEventListener('fetch', (event) => {
     );
     return;
   }
+   
 
   // Aynı kaynak + Google Fonts: önbellek öncelikli, arkada yenile
   if (url.origin === self.location.origin || FONT_HOSTS.includes(url.hostname)) {
